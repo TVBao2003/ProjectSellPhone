@@ -1,8 +1,15 @@
+:root{
+    --logoColor:#DF052B;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
 #bannerHead{
     width: 100%;
     height: 13%;
-    background-color:#DF052B;
-    position: absolute;
+    background-color:var(--logoColor);
+    position: absolute ;
     top: 0;
     left: 0;
     display: flex;
@@ -31,11 +38,9 @@
 }
 .list-items{
     list-style: none;
-    background-color: #fb5151;
-    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 1%;
-    border-radius: 20px;
-    margin-left: 40px;
+    margin-left: 40px   ;
     margin-top: 5px;
 }
 #div_list{
@@ -44,19 +49,120 @@
 }
 
 #div_logo{
-    width: 20%;
+    
     text-align: center;
     display: flex;
     flex-direction: row;
     margin-left: 5%;
 }
 #name_logo{
-    font-size: 140%;
+    font-size: 150%;
+    width: 200%;
     color: white;
-    margin-top: 10px;
+    margin-top: 15%;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#div_logo img{
+    width: 100%;
+    object-fit:contain;
+    
 }
 #logo_item{
     width: 100%;
     height: 100%;
+}
+.list-items:hover{
+    background-color: #fb5151;
+    border-radius: 20px;
+}
+@media screen and (max-width: 1271px){
+    #bannerHead{
+        height: 30%;
+        background-color: var(--logoColor);
+    }
+    #div_logo img{
+        width: 30%;
+    }
+    #name_logo{
+        font-size: 150%;
+        margin-top: 25%;
+    }
+} 
+@media screen and (max-height: 450px){
+    #name_logo{
+        font-size: 110%;
+        margin-top: 25%;
+    }
+    #ul_bannerHead {
+        font-size: 90%;
+        
+    }
+}
+@media screen and (max-height: 330px){
+    #name_logo{
+        font-size: 70%;
+        margin-top: 25%;
+    }
+    #ul_bannerHead {
+        font-size: 80%;
+        
+    }
+}
+
+#produces_logo{
+    width: 100%;
+    height: 200%;
+    background-color:white;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding:0 10px;
+}
+
+#title_produce{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.produce_item{
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+}
+#list_produce{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+.produce_info img{
+    object-fit: contain;
+    width: 60%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.produce_img{
+  text-align: center;
+}
+.produce_info_container{
+    padding: 10px;
+}   
+.produce_name{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+.produce_price{
+    color: var(--logoColor);
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}  
+
+.heart_item{
+    margin-top: 30px;
+    text-align: end;
+    color: var(--logoColor);
 }
