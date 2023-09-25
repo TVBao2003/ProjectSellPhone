@@ -139,7 +139,7 @@ body{
     flex-wrap: wrap;
     justify-content:space-around;
 }
-.produce_info img{
+.produce_img img{
     object-fit: contain;
     width: 60%;
     margin-top: 5px;
@@ -152,17 +152,19 @@ body{
     padding: 10px;
 }   
 .produce_name{
+    margin-top: 10px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
 }
 .produce_price{
     color: var(--logoColor);
     text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }  
 
 .heart_item{
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: end;
     color: var(--logoColor);
 }
