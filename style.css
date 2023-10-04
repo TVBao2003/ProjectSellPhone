@@ -1,5 +1,9 @@
 :root{
     --logoColor:#DF052B;
+    --clickChange:  #9d9d9d;
+}
+*{
+    margin: 0;
 }
 body{
     width: 100%;
@@ -7,9 +11,9 @@ body{
 }
 #bannerHead{
     width: 100%;
-    height: 13%;
+    height: 100px;
     background-color:var(--logoColor);
-    position: absolute ;
+    position: relative ;
     top: 0;
     left: 0;
     display: flex;
@@ -29,12 +33,11 @@ body{
     position: absolute;
     bottom: 30%;
     right: 5%;
-    
 }
 #nav_menu{
     position: relative;
     width: 60%;
-
+    height: 100px;
 }
 
 .list-items{
@@ -74,26 +77,26 @@ body{
 }
 #name_logo{
     font-size: 150%;
+    height: 100%;
     width: 200%;
     color: white;
     margin-top: 15%;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-#div_logo img{
-    width: 100%;
-    object-fit:contain;
-    
-}
 #logo_item{
     width: 100%;
-    height: 100%;
+    height: 90%;
+    object-fit:cover;
+    cursor: pointer;
+    border: 1px solid white;
+    margin: 3px 5px 0;
 }
 #produces_logo{
     width: 100%;
-    height: 200%;
+    height: 700px;
     background-color:white;
-    position: absolute;
-    top: 15%;
+    position: relative;
+    top: 10px;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -108,9 +111,14 @@ body{
     width: 200px;
     height: 300px;
     background-color: white;
-    margin: 10px;
+    margin:10px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+}
+.produce_item:hover{
+    border: 2px solid #ff526f;
+    transition-delay: 0.2s;
 }
 #list_produce{
     display: flex;
@@ -149,18 +157,24 @@ body{
 }
 
 .button_buy button{
-    background-color: var(--logoColor);
-    border: none;
-    color: white;
+    background-color: white;
+    border: 2px solid var(--logoColor);
+    border-radius: 5px;
+    color: var(--logoColor);
     padding: 7px;
     font-weight: 400;
+    cursor: pointer;
 }
 .button_buy button:active{
-    background-color: #f5627a;
+    color: white;
+    background-color: var(--logoColor);
+    transform: scale(0.8);
+    transition: 0.3s;
 }
 .button_save i{
     font-size: 25px;
-    color: #9d9d9d;
+    color: var(--clickChange);
+    cursor: pointer;
 }
 
 .button_save i:hover{
@@ -170,12 +184,18 @@ body{
 .heart_item{
     font-weight: 10;
     text-align: end;
-    color: var(--logoColor);
+    color: var(--clickChange);
     display: flex;
     justify-content: end;
     margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    cursor: pointer;
 }
 .heart_item i{
     font-size: 20px;
-    
+    color: var(--clickChange);
 }
+
+
