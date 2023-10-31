@@ -1,6 +1,7 @@
 :root{
     --logoColor:#DF052B;
     --clickChange:  #9d9d9d;
+    --hoverColor:  #fb5151;
 }
 *{
     margin: 0;
@@ -27,30 +28,27 @@ body{
     font-size: 120%;
     color: white;
     font-family:monospace;
-    width: 100%;
-    margin: 0;
-    margin-top: 20px;
+    width: 711px;
     position: absolute;
     bottom: 30%;
     right: 5%;
 }
 #nav_menu{
     position: relative;
-    width: 42%;
     height: 100px;
 }
 
 .list-items{
     list-style: none;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 1%;
-    margin-left: 40px;
+    margin-right: 50px;
     position: relative;
+    padding: 10px;
 }
 
 .list-items:hover{
-    background-color: #fb5151;
-    border-radius: 20px;
+    background-color: var(--hoverColor);
+    border-radius: 30px;
 }
 
 .list-items a i{
@@ -69,7 +67,6 @@ body{
 }
 
 #div_logo{
-    
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -117,7 +114,7 @@ body{
     box-sizing: border-box;
 }
 .produce_item:hover{
-    border: 2px solid #ff526f;
+    border: 2px solid var(--hoverColor);
     transition-delay: 0.2s;
 }
 #list_produce{
@@ -175,6 +172,7 @@ body{
     font-size: 25px;
     color: var(--clickChange);
     cursor: pointer;
+    margin-top: 3px;
 }
 
 .button_save i:hover{
@@ -187,7 +185,7 @@ body{
     color: var(--clickChange);
     display: flex;
     justify-content: end;
-    margin-top: 4px;
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
     font-size: 17px;
@@ -203,7 +201,7 @@ main{
 .modal_cart{
     position: absolute;
     height: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.6);
     z-index: 1;
     top: 0;
     bottom: 0;
@@ -217,7 +215,7 @@ main{
     width: 500px;
     height: 500px;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
     margin: 40px auto;
     position: relative;
@@ -226,7 +224,7 @@ main{
 .modal_header{
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding: 30px;
     background-color: var(--logoColor);
     color: white;
     font-size: 25px;
@@ -237,12 +235,15 @@ main{
     cursor: pointer;
     transition: 0.5s;
     /* transform: skew(45deg, -45deg); */
+    padding: 5px;
+    border-radius: 50%;
 }
-/* .icon_close:hover{
-    transform: skew(0deg, 0deg);
-} */
+.icon_close:hover{
+    background-color: #b30724d0;
+}
+
 .modal_body{
-    padding: 15px;
+    height: 345px;
     font-family: none;
     font-style: none;
     font-size: 15px;
@@ -282,3 +283,31 @@ main{
     display: block;
 }
 
+/*---class add field data products*/
+.dataProducts-SpaceBetween{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dataProducts_style{
+    border-top : 1px solid var(--clickChange);
+    border-bottom : 1px solid var(--clickChange);
+    padding: 5px;
+    margin-top: 10px;
+}
+.dataProducts_style:hover{
+    background-color: var(--hoverColor);
+    color: white;
+    border-color: var(--logoColor);
+    cursor: pointer;
+}
+
+.dataProducts_button--pop{
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--clickChange);
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 3px;
+    cursor: pointer;
+}
