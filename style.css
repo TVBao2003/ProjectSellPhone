@@ -44,11 +44,13 @@ body{
     margin-right: 50px;
     position: relative;
     padding: 10px;
+    transition: 0.5s ease;
+    border-radius: 30px;
 }
 
 .list-items:hover{
     background-color: var(--hoverColor);
-    border-radius: 30px;
+    
 }
 
 .list-items a i{
@@ -166,13 +168,15 @@ body{
     color: white;
     background-color: var(--logoColor);
     transform: scale(0.8);
-    transition: 0.3s;
+    transition: 0.1s;
 }
+
 .button_save i{
     font-size: 25px;
     color: var(--clickChange);
     cursor: pointer;
     margin-top: 3px;
+    
 }
 
 .button_save i:hover{
@@ -190,17 +194,19 @@ body{
     justify-content: space-between;
     font-size: 17px;
     cursor: pointer;
+    transition: 0.5s ease;
 }
 .heart_item i{
     font-size: 20px;
     color: var(--clickChange);
+    transition: 0.2s ease;
 }
 main{
     position: relative;
 }
 .modal_cart{
     position: absolute;
-    height: auto;
+    height: 10010000px;
     background-color: rgba(0,0,0,0.6);
     z-index: 1;
     top: 0;
@@ -212,7 +218,7 @@ main{
 
 .modal_button_cart{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 500px;
+    width: 550px;
     height: 500px;
     background-color: white;
     border-radius: 10px;
@@ -247,6 +253,8 @@ main{
     font-family: none;
     font-style: none;
     font-size: 15px;
+    overflow-y: scroll;
+
 }
 .modal_footer{
     background-color: white;
@@ -257,6 +265,7 @@ main{
     display: flex;
     justify-content: end;
     overflow: hidden;
+    
 }
 
 .modal_button-close{
@@ -290,24 +299,78 @@ main{
 }
 
 .dataProducts_style{
-    border-top : 1px solid var(--clickChange);
-    border-bottom : 1px solid var(--clickChange);
+    width: 100%;
+    border-top:  1px solid var(--clickChange);
+    border-bottom:  1px solid var(--clickChange);
     padding: 5px;
-    margin-top: 10px;
+    transition: 0.5s ease;
 }
-.dataProducts_style:hover{
+
+/* .dataProducts_style:hover{
     background-color: var(--hoverColor);
     color: white;
     border-color: var(--logoColor);
     cursor: pointer;
-}
+} */
 
 .dataProducts_button--pop{
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--clickChange);
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--clickChange);
+    outline: none;
     background-color: white;
     border-radius: 5px;
-    margin-top: 3px;
+    margin-left: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    display: none;
+    transition: 0.2s ease;
+}
+
+.dataProducts_button--buy{
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--clickChange);
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    display: none;
+    transition: 0.2s ease;
+}
+.dataProducts_contain{
+    display: flex;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    
+}
+
+
+.dataProducts_button--buy:hover{
+    border: 3px solid rgb(143, 237, 3);
+}
+.dataProducts_button--pop:hover{
+    border: 3px solid rgb(255, 170, 0);
+}
+.dataProducts_contain:hover{
+    background-color: var(--hoverColor);
+}
+.dataProducts_contain:hover .dataProducts_button--pop{
+    display: block;
+
+}
+.dataProducts_contain:hover .dataProducts_button--buy{
+    display: block;
+ 
+
+}
+.dataProducts_contain:hover .dataProducts_style{
+    width: 450px;
+    background-color: var(--hoverColor);
+    color: white;
+    border-color: var(--logoColor);
     cursor: pointer;
 }
