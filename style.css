@@ -92,100 +92,36 @@ body{
     margin: 10px 10px 0;
 }
 
+.modal_menu{
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+   z-index: 3;
+    background-color: rgba(0,0,0, 0.6);
+    display: none;
+}
+.responsive_nav_menu{
+    display: none;
+    color: white;
 
-@media (max-width: 1000px){
-    #bannerHead{
-        display: block;
-        height: 200%;
-        padding: 3%;
-    }
-    #div_logo{
-        justify-content: space-around;
-        position: relative;
-
-    }
-    #name_logo{
-        font-size: 200%;  
-        width: unset;
-        height: unset;
-        margin-top: 20px;
-    }
-    #logo_item{
-        position: relative;
-        top: 0px;
-        width: 50px;
-        height: 50px;
-    }
-    #nav_menu{
-        height: 50px;
-        position: relative;
-        top: 20px;
-    }
-    
-    #ul_bannerHead{
-        justify-content: space-around;
-        right: unset;
-        width: 100%;
-        padding: 0;
-        position: unset;
-    }
-    .list-items{
-        margin-right: unset;
-        margin-right: 5px;
-        margin-left: 5px;
-        padding: 5px;
-        font-size: 100%;
-    }
-    .list-items a i{
-        font-size: 100%;
-        top: unset;
-    }
 }
 
-@media (max-width: 400px){
-    #bannerHead{
-        display: block;
-        padding: unset;
-        height: 100px;
-    }
-    #div_logo{
-        justify-content: space-around;
-    }
-    #name_logo{
-        font-size: 20px;  
-        width: unset;
-        height: unset;
-        margin-top: 20px;
-    }
-    #logo_item{
-        position: relative;
-        top: 0px;
-        width: 50px;
-        height: 50px;
-    }
-    #nav_menu{
-        height: 50px;
-        top: 5px;
-    }
-    
-    #ul_bannerHead{
-        justify-content: space-around;
-        right: unset;
-        width: 100%;
-        padding: 0;
-    }
-    .list-items{
-        margin-right: unset;
-        margin-right: 5px;
-        margin-left: 5px;
-        padding: 5px;
-        font-size: 10px;
-    }
-    .list-items a i{
-        font-size: 10px;
-        top: unset;
-    }
+.modal_responsive_menu{
+    width: 100px;
+    height: 150px;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    right: 0;
+    border-radius: 10px;
 }
+.modal_responsive_menu #ul_bannerHead{
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/*--------------------------------Main--------------------------------------*/
+
 #produces_logo{
     width: 100%;
     height: 700px;
@@ -301,9 +237,10 @@ main{
 }
 .modal_cart{
     position: absolute;
+    width: 100%;
     height: 10010000px;
     background-color: rgba(0,0,0,0.6);
-    z-index: 1;
+    z-index: 3;
     top: 0;
     bottom: 0;
     right: 0;
@@ -349,7 +286,7 @@ main{
     font-style: none;
     font-size: 15px;
     overflow-y: scroll;
-
+    
 }
 .modal_footer{
     background-color: white;
@@ -391,6 +328,7 @@ main{
 .dataProducts-SpaceBetween{
     display: flex;
     justify-content: space-between;
+    transition: all 0.3s ease;
 }
 
 .dataProducts_style{
@@ -413,7 +351,7 @@ main{
     margin-top: 5px;
     cursor: pointer;
     display: none;
-    transition: 0.2s ease;
+    transition:all 0.3s ease;
 }
 
 .dataProducts_button--buy{
@@ -427,13 +365,13 @@ main{
     margin-top: 5px;
     cursor: pointer;
     display: none;
-    transition: 0.2s ease;
+    transition:all 0.3s ease;
 }
 .dataProducts_contain{
     display: flex;
     margin-top: 10px;
     cursor: pointer;
-    transition: 0.4s ease;
+    transition:all 0.4s ease;
     
 }
 
@@ -446,6 +384,7 @@ main{
 }
 .dataProducts_contain:hover{
     background-color: var(--hoverColor);
+    justify-content: space-between;
 }
 .dataProducts_contain:hover .dataProducts_button--pop{
     display: block;
@@ -463,3 +402,126 @@ main{
     border-color: var(--logoColor);
     cursor: pointer;
 }
+
+/*-----------Responsive-------------------------------------*/
+@media (max-width: 1000px){
+    #bannerHead{
+        display: block;
+        height: 200%;
+        
+    }
+    #div_logo{
+        justify-content: space-around;
+        position: relative;
+
+    }
+    #name_logo{
+        font-size: 200%;  
+        width: unset;
+        height: unset;
+        margin-top: 20px;
+    }
+    #logo_item{
+        position: relative;
+        top: 0px;
+        width: 50px;
+        height: 50px;
+    }
+    #nav_menu{
+        height: 50px;
+        position: relative;
+        top: 5px;
+        left: 0;
+    }
+    
+    #ul_bannerHead{
+        justify-content: space-around;
+        right: unset;
+        width: 100%;
+        padding: 0;
+        position: unset;
+    }
+    .list-items{
+        margin-right: unset;
+        margin-right: 5px;
+        margin-left: 5px;
+        padding: 5px;
+        font-size: 120%;
+    }
+    .list-items a i{
+        font-size: 120%;
+        top: unset;
+    }
+
+
+    .modal_button_cart{
+        width: 90%;
+    }
+}
+@media (max-width: 500px){
+    #nav_menu{
+        position: absolute;
+        width: 100%;
+        height: 10000px;
+        top: 100px;
+        background-color: rgba(0,0,0, 0.6);
+    }
+
+    #ul_bannerHead{
+        height: 200px;
+        flex-direction: column;
+        background-color: var(--clickChange);
+       
+        padding: 5px;
+    }
+    .modal_responsive_menu{
+        margin-top: 2px;
+    }
+
+    .responsive_nav_menu{
+        display: block;
+        position: absolute;
+        right: 0;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+    
+    #bannerHead{
+        display: block;
+        padding: unset;
+        height: 100px;
+        z-index: 3;
+    }
+    #div_logo{
+        justify-content: space-around;
+    }
+    #name_logo{
+        font-size: 20px;  
+        width: unset;
+        height: unset;
+        margin-top: 20px;
+    }
+    #logo_item{
+        position: relative;
+        top: 0px;
+        width: 50px;
+        height: 50px;
+    }
+   
+    
+   
+    .list-items{
+        margin-right: unset;
+        margin-right: 5px;
+        margin-left: 5px;
+        padding: 5px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .list-items a i{
+        font-size:15px;
+        top: unset;
+    }
+
+}
+

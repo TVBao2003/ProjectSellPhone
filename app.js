@@ -50,6 +50,7 @@ elementsProduceAct.forEach((e, index)=>{
 /*---------------------design bar------------------- */
 //----elements of nav-----------
 var listItems = document.querySelectorAll('.list-items');
+console.log(listItems)
 var listProductsExist = new Map();
 var arrayName = [];
 
@@ -99,6 +100,7 @@ listItems.forEach((item, index)=>{
         
         //-------click to Close----------
         iconClose.onclick = ()=>{
+
             if(isOpen){
                 clickOffOpen(elementCartModal);
             }
@@ -146,12 +148,13 @@ listItems.forEach((item, index)=>{
                     //-----create div tag------
                     var containProductSaved = document.createElement('div');
                     var informationProductSaved = document.createElement('div');
+                    var containButtonsBuyOrDelete = document.createElement("div");
                     //-----design CSS div tag------
                
                     containProductSaved.classList.add('dataProducts_contain');
                     informationProductSaved.classList.add('dataProducts-SpaceBetween');
                     informationProductSaved.classList.add('dataProducts_style');
-
+                    containButtonsBuyOrDelete.classList.add('dataProducts-SpaceBetween')
                     //------create span tag-------
                     var spanElementName = document.createElement('span');
                     var spanElementPrice = document.createElement('span');
@@ -171,7 +174,8 @@ listItems.forEach((item, index)=>{
                     imageElement.style.height = '30px';
 
                     var btnPopProduct= document.createElement('button');
-                    var btnBuyProduct= document.createElement('button')
+                    var btnBuyProduct= document.createElement('button');
+
                     btnPopProduct.classList.add("dataProducts_button--pop");
                     btnBuyProduct.classList.add("dataProducts_button--buy");
                     //-----add span and image elements in div tag-------
@@ -179,10 +183,11 @@ listItems.forEach((item, index)=>{
                     informationProductSaved.appendChild(spanElementName);
                     informationProductSaved.appendChild(spanElementPrice);
 
+                    containButtonsBuyOrDelete.appendChild(btnBuyProduct);
+                    containButtonsBuyOrDelete.appendChild(btnPopProduct);
 
                     containProductSaved.appendChild(informationProductSaved);
-                    containProductSaved.appendChild(btnBuyProduct);
-                    containProductSaved.appendChild(btnPopProduct);
+                    containProductSaved.appendChild(containButtonsBuyOrDelete);
                     bodyModal.appendChild(containProductSaved);
                     
                     listDataProducts.shift();
@@ -194,7 +199,7 @@ listItems.forEach((item, index)=>{
             var deleteProductsSaved = document.querySelectorAll('.dataProducts_button--pop');
             deleteProductsSaved.forEach((element)=>{
                element.onclick = ()=>{
-                    var nameOfProduct = element.parentElement.querySelector("span").textContent;
+                    var nameOfProduct = element.parentElement.parentElement.querySelector("span").textContent;
                     var idOfProduct = listProductsExist.get(nameOfProduct);
                     var indexOfProduct = arrayName.indexOf(nameOfProduct);
 
@@ -205,7 +210,7 @@ listItems.forEach((item, index)=>{
                     elementsProduceAct[idOfProduct].querySelector(".button_save").innerHTML = "<i class='bx bx-cart-alt'></i>";
 
                     //--------pop product out cart
-                    bodyModal.removeChild(element.parentElement)
+                    bodyModal.removeChild(element.parentElement.parentElement)
                    
                 }
             })
@@ -215,3 +220,19 @@ listItems.forEach((item, index)=>{
     }
    
 })
+
+var responsiveMenu = document.querySelector(".responsive_nav_menu");
+var modalMenu = document.querySelector("#nav_menu");
+
+
+    responsiveMenu.onclick = ()=>{
+        if(modalMenu.style.display === 'flex'){
+            modalMenu.style.display = 'none';
+         
+        }else{
+            modalMenu.style.display = 'flex'
+        }  
+    }
+
+
+   
