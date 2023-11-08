@@ -107,29 +107,26 @@ body{
 .modal_search{
     position: absolute;
     bottom: 5px;
-    left: 80px;
+    left: 100px;
     z-index: 1 ;
-    margin-left: 5px;
-    display: none;
-    
+    margin-left: 5px;   
+    transition: all 3s ease;
 }
 
 .input_search_modal{
-    width: 0px;
-    height: 25px;
-    z-index: 1;
+    width: 100%;
+    height:30px;
     transition: all 1s ease;
-    background-color: var(--logoColor);
-}
-.list-items:nth-child(1):hover .modal_search{
-    display: block;
+    background-color: white;
+    outline: unset;
+    border: 1px solid black;
 }
 
-.open__search{
+.input_search_modal:focus{
+
+}
+.open-search{
     width: 550px;
-    height: 25px;
-    padding: 5px;
-
 }
 
 
@@ -443,7 +440,7 @@ main{
 }
 .dataProducts_contain:hover .dataProducts_button--buy{
     display: block;
- 
+    
 
 }
 .dataProducts_contain:hover .dataProducts_style{
@@ -456,76 +453,24 @@ main{
 
 /*-----------Responsive-------------------------------------*/
 @media (max-width: 1000px){
-    #bannerHead{
-        display: block;
-        height: 200%;
-        padding-bottom: 10px;
-    }
-    #div_logo{
-        justify-content: space-around;
-        position: relative;
-
-    }
-    #name_logo{
-        font-size: 200%;  
-        width: unset;
-        height: unset;
-        margin-top: 20px;
-    }
-    #logo_item{
-        position: relative;
-        top: 0px;
-        width: 50px;
-        height: 50px;
-    }
-    #nav_menu{
-        display: unset;
-        display: flex;
-        height: 50px;
-        position: relative;
-        top: 5px;
-        left: 0;
-    }
-    
-    #ul_bannerHead{
-        justify-content: space-around;
-        right: unset;
-        width: 100%;
-        padding: 0;
-        position: unset;
-    }
-    .list-items{
-        margin-right: unset;
-        margin-right: 5px;
-        margin-left: 5px;
-        font-size: 120%;
-    }
-    .list-items a i{
-        font-size: 120%;
-        top: unset;
-    }
-
-
-    .modal_button_cart{
-        width: 90%;
-    }
-}
-@media (max-width: 500px){
     #nav_menu{
         position: absolute;
         width: 100%;
-        height: 10000px;
+        height: 1000px;
         top: 100px;
         background-color: rgba(0,0,0, 0.6);
         display: none;
+       
     }
 
     #ul_bannerHead{
-        height: 200px;
         flex-direction: column;
         background-color: var(--clickChange);
-       
+        width: 100%;
+        height: 300px;
         padding: 5px;
+        justify-content: space-around;
+        bottom: unset;
     }
     .modal_responsive_menu{
         margin-top: 2px;
@@ -568,11 +513,77 @@ main{
         padding: 5px;
         font-size: 15px;
         text-align: center;
+        background-color: unset;
     }
     .list-items a i{
         font-size:15px;
         top: unset;
     }
 
-}
+    .modal_search{
+        margin-bottom: 50px;
+        width: 90%;
+        left: unset;
+    }
+    .input_search_modal{
+        width: 100%;
+        height: unset;
+    }
 
+}/*
+@media (max-width: 1000px){
+    #bannerHead{
+        display: block;
+        height: 200%;
+        padding-bottom: 10px;
+    }
+    #div_logo{
+        justify-content: space-around;
+        position: relative;
+        
+    }
+    #name_logo{
+        font-size: 200%;  
+        width: unset;
+        height: unset;
+        margin-top: 20px;
+    }
+    #logo_item{
+        position: relative;
+        top: 0px;
+        width: 50px;
+        height: 50px;
+    }
+    #nav_menu{
+        display: unset;
+        display: flex;
+        height: 50px;
+        position: relative;
+        top: 5px;
+        left: 0;
+    }
+    
+    #ul_bannerHead{
+        justify-content: space-around;
+        right: unset;
+        width: 100%;
+        padding: 0;
+        position: unset;
+    }
+    .list-items{
+        margin-right: unset;
+        margin-right: 5px;
+        margin-left: 5px;
+        font-size: 100%;
+    }
+    .list-items a i{
+        font-size: 120%;
+        top: unset;
+    }
+
+
+    .modal_button_cart{
+        width: 90%;
+    }
+}
+ */

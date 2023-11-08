@@ -94,21 +94,18 @@ listItems.forEach((item, index)=>{
         var inputSearchElementModal = elementSearchModal.querySelector(".input_search_modal");
         
         
-        // elementSearchModal.style.display = 'none';
+        elementSearchModal.style.display = 'none';
         item.onclick = () =>{
-            if(inputSearchElementModal.classList.contains('open__search')){
-                inputSearchElementModal.classList.remove('open__search');
-            }else inputSearchElementModal.classList.add('open__search');
-        //     console.log(inputSearchElementModal)
-        //     if(elementSearchModal.style.display === 'none'){
-        //         inputSearchElementModal.classList.add('open-search');
-        //         elementSearchModal.style.display = 'block';
+            if(elementSearchModal.style.display === 'none'){
+                elementSearchModal.classList.add('open-search');
+                elementSearchModal.style.display = 'block';
                 
-        //     }else{
-        //         elementSearchModal.style.display = 'none';
-        //         inputSearchElementModal.classList.remove('open-search');
-        //     }
-        // }
+            }else{
+                elementSearchModal.style.display = 'none';
+                elementSearchModal.classList.remove('open-search');
+               
+            }
+        }
     }
     //--------is cart item------
     if(index === 3){
@@ -243,7 +240,6 @@ listItems.forEach((item, index)=>{
             changeOpen(item, aElement);
         }
     }
-}
 })
 //--------------------Modal Menu responsive-------------------
 var responsiveMenu = document.querySelector(".responsive_nav_menu");
