@@ -50,7 +50,6 @@ elementsProduceAct.forEach((e, index)=>{
 /*---------------------design bar------------------- */
 //----elements of nav-----------
 var listItems = document.querySelectorAll('.list-items');
-console.log(listItems)
 var listProductsExist = new Map();
 var arrayName = [];
 
@@ -89,6 +88,28 @@ listItems.forEach((item, index)=>{
         element.classList.add('change_click-item');
     }
 
+
+    if(index === 0){
+        var elementSearchModal = document.querySelector(".modal_search");
+        var inputSearchElementModal = elementSearchModal.querySelector(".input_search_modal");
+        
+        
+        // elementSearchModal.style.display = 'none';
+        item.onclick = () =>{
+            if(inputSearchElementModal.classList.contains('open__search')){
+                inputSearchElementModal.classList.remove('open__search');
+            }else inputSearchElementModal.classList.add('open__search');
+        //     console.log(inputSearchElementModal)
+        //     if(elementSearchModal.style.display === 'none'){
+        //         inputSearchElementModal.classList.add('open-search');
+        //         elementSearchModal.style.display = 'block';
+                
+        //     }else{
+        //         elementSearchModal.style.display = 'none';
+        //         inputSearchElementModal.classList.remove('open-search');
+        //     }
+        // }
+    }
     //--------is cart item------
     if(index === 3){
 
@@ -99,7 +120,7 @@ listItems.forEach((item, index)=>{
         var bodyModal = elementCartModal.querySelector('.modal_body');
         
         //-------click to Close----------
-        iconClose.onclick = ()=>{
+        iconClose.onclick = () =>{
 
             if(isOpen){
                 clickOffOpen(elementCartModal);
@@ -178,6 +199,10 @@ listItems.forEach((item, index)=>{
 
                     btnPopProduct.classList.add("dataProducts_button--pop");
                     btnBuyProduct.classList.add("dataProducts_button--buy");
+                 
+                    btnBuyProduct.innerHTML = "<i class='bx bx-check'></i>";
+                    btnPopProduct.innerHTML = "<i class='bx bx-x'></i>";
+
                     //-----add span and image elements in div tag-------
                     informationProductSaved.appendChild(imageElement);
                     informationProductSaved.appendChild(spanElementName);
@@ -218,21 +243,22 @@ listItems.forEach((item, index)=>{
             changeOpen(item, aElement);
         }
     }
-   
+}
 })
-
+//--------------------Modal Menu responsive-------------------
 var responsiveMenu = document.querySelector(".responsive_nav_menu");
 var modalMenu = document.querySelector("#nav_menu");
 
+responsiveMenu.innerHTML = "<i class='bx bx-menu'></i>";
 
-    responsiveMenu.onclick = ()=>{
-        if(modalMenu.style.display === 'flex'){
-            modalMenu.style.display = 'none';
-         
-        }else{
-            modalMenu.style.display = 'flex'
-        }  
-    }
+responsiveMenu.onclick = ()=>{
+    if(modalMenu.style.display === 'flex'){
+        modalMenu.style.display = 'none';   
+        responsiveMenu.innerHTML = "<i class='bx bx-menu'></i>";        
+    }else{
+        modalMenu.style.display = 'flex'
+        responsiveMenu.innerHTML = "<i class='bx bx-x'></i>";
+    }  
+}
 
 
-   
