@@ -103,34 +103,80 @@ body{
     display: none;
 }
 
-/*--------------------modal menu responsive-----------------*/
+/*--------------------modal responsive-----------------*/
+
+
+/**/
+/*-----SEARCH MODAL--------*/
 .modal_search{
     position: absolute;
-    bottom: 5px;
-    left: 100px;
-    z-index: 1 ;
-    margin-left: 5px;   
+    width: 100%;
+    height: 1000px;
+    background-color:rgba(0,0,0, 0.6);
+    text-align: center;
+    z-index: 1 ; 
     transition: all 3s ease;
+    display: none;
 }
 
-.input_search_modal{
-    width: 100%;
-    height:30px;
+.modal_button_search{
+    width: 80%;
+    height: 500px;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+}
+
+.modal_search--header{
+    width: 95%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.input--search{
+    width: 85%;
+    padding: 5px;
     transition: all 1s ease;
     background-color: white;
     outline: unset;
-    border: 1px solid black;
+    border: 1.5px solid var(--logoColor);
+    flex: 9;
 }
 
-.input_search_modal:focus{
-
+.input--search:focus{
+    border: 2px solid var(--logoColor);
 }
+.button--search{
+    margin-left: 10px;
+    flex: 1;
+}
+.modal_search--body{
+    width: 95%;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.modal_search--footer{
+    width:50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: end;
+}
+
+
 .open-search{
     width: 550px;
 }
 
 
-
+/*-----------MENU MODAL-----*/
 .responsive_nav_menu{
     display: none;
     color: white;
@@ -150,6 +196,98 @@ body{
     justify-content: space-around;
 }
 
+/*-------CART MODAL-------*/
+.modal_cart{
+    position: absolute;
+    width: 100%;
+    height: 10010000px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+}
+
+.modal_button_cart{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 90%;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 40px auto;
+    position: relative;
+}
+
+.modal_cart--header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: var(--logoColor);
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    flex: 1;
+}
+.modal_cart--body{
+    height: 345px;
+    font-family: none;
+    font-style: none;
+    font-size: 15px;
+    overflow-y: scroll;
+    
+}
+.modal_cart--footer{
+    background-color: white;
+    padding: 15px;
+    position: absolute;
+    width: 95%;
+    bottom: 0;
+    display: flex;
+    justify-content: end;
+    overflow: hidden;
+    
+}
+
+.button_style{
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: var(--logoColor) solid 1.5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.button_style:hover{
+    background-color: var(--logoColor);
+    color: white ;
+}
+
+
+.icon_close{
+    cursor: pointer;
+    transition: 0.5s;
+    /* transform: skew(45deg, -45deg); */
+    padding: 5px;
+    border-radius: 50%; 
+}
+.icon_close:hover{
+    background-color: #b30724d0;
+}
+
+
+.change_click-item{
+    background-color: white;
+    border-radius: 20px;
+}
+.field_close{
+    display: none;
+}
+
+.field_open{
+    display: block;
+}
 
 /*--------------------------------Main--------------------------------------*/
 
@@ -265,94 +403,6 @@ body{
 }
 main{
     position: relative;
-}
-.modal_cart{
-    position: absolute;
-    width: 100%;
-    height: 10010000px;
-    background-color: rgba(0,0,0,0.6);
-    z-index: 3;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: none;
-}
-
-.modal_button_cart{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 90%;
-    height: 500px;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 40px auto;
-    position: relative;
-}
-
-.modal_header{
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    background-color: var(--logoColor);
-    color: white;
-    font-size: 25px;
-    font-weight: 900;
-    flex: 1;
-}
-.icon_close{
-    cursor: pointer;
-    transition: 0.5s;
-    /* transform: skew(45deg, -45deg); */
-    padding: 5px;
-    border-radius: 50%;
-}
-.icon_close:hover{
-    background-color: #b30724d0;
-}
-
-.modal_body{
-    height: 345px;
-    font-family: none;
-    font-style: none;
-    font-size: 15px;
-    overflow-y: scroll;
-    
-}
-.modal_footer{
-    background-color: white;
-    padding: 15px;
-    position: absolute;
-    width: 90%;
-    bottom: 0;
-    display: flex;
-    justify-content: end;
-    overflow: hidden;
-    
-}
-
-.modal_button-close{
-    padding: 5px 15px;
-    border-radius: 5px;
-    border: var(--logoColor) solid 2px;
-    background-color: white;
-    cursor: pointer;
-}
-
-.modal_button-close:hover{
-    background-color: var(--logoColor);
-    color: white ;
-}
-.change_click-item{
-    background-color: white;
-    border-radius: 20px;
-}
-.field_close{
-    display: none;
-}
-
-.field_open{
-    display: block;
 }
 
 /*-----------class add field data products*/

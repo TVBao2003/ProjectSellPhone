@@ -55,7 +55,6 @@ var arrayName = [];
 
 listItems.forEach((item, index)=>{
     var isOpen = false;
-    var aElement = item.querySelector('a');
 
     //------methods change modal------------
     function clickClose(e){
@@ -90,57 +89,64 @@ listItems.forEach((item, index)=>{
 
 
     if(index === 0){
+        isOpen = false;
+        var aElement = item.querySelector('a');
         var elementSearchModal = document.querySelector(".modal_search");
+        var btnClose = elementSearchModal.querySelector(".button--close");
         var inputSearchElementModal = elementSearchModal.querySelector(".input_search_modal");
         
         
-        elementSearchModal.style.display = 'none';
+        // elementSearchModal.style.display = 'none';
         item.onclick = () =>{
-            if(elementSearchModal.style.display === 'none'){
-                elementSearchModal.classList.add('open-search');
-                elementSearchModal.style.display = 'block';
-                
-            }else{
-                elementSearchModal.style.display = 'none';
-                elementSearchModal.classList.remove('open-search');
-               
+            if(!isOpen){
+                clickOffClose(elementSearchModal);             
+                clickOpen(elementSearchModal);
+                changeOpen(item, aElement);
             }
         }
+
+        btnClose.onclick = ()=>{
+            if(isOpen){
+                clickOffOpen(elementSearchModal);
+                changeClose(item, aElement)
+            }
+        }
+
     }
     //--------is cart item------
     if(index === 3){
-
+        isOpen = false;
+        var aElement = item.querySelector('a');
         //---elements of modal cart----------
         var elementCartModal = document.querySelector(".modal_cart");
         var iconClose = elementCartModal.querySelector("i");
-        var btnClose = elementCartModal.querySelector(".modal_button-close");
+        var btnClose = elementCartModal.querySelector(".button--close");
         var bodyModal = elementCartModal.querySelector('.modal_body');
         
         //-------click to Close----------
         iconClose.onclick = () =>{
-
             if(isOpen){
                 clickOffOpen(elementCartModal);
+                changeClose(item, aElement);
+                clickClose(elementCartModal);
             }
-            changeClose(item, aElement);
-            clickClose(elementCartModal);
         }
         
         btnClose.onclick = ()=>{
             if(isOpen){
                 clickOffOpen(elementCartModal);
+                changeClose(item, aElement);
+                clickClose(elementCartModal);
             }
-            changeClose(item, aElement);
-            clickClose(elementCartModal);
         }
         
         elementCartModal.onclick = (e)=>{
             if(e.target === e.currentTarget){
                 if(isOpen){
                     clickOffOpen(elementCartModal);
+                    changeClose(item, aElement);
+                    clickClose(elementCartModal);
                 }
-                changeClose(item, aElement);
-                clickClose(elementCartModal);
             }
         }
 
@@ -148,6 +154,8 @@ listItems.forEach((item, index)=>{
         item.onclick = ()=>{
             if(!isOpen){
                 clickOffClose(elementCartModal);
+                clickOpen(elementCartModal);
+                changeOpen(item, aElement);
             }
 
             //-----------update new data---------- 
@@ -236,8 +244,6 @@ listItems.forEach((item, index)=>{
                    
                 }
             })
-            clickOpen(elementCartModal);
-            changeOpen(item, aElement);
         }
     }
 })
