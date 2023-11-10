@@ -94,14 +94,6 @@ body{
     margin: 10px 10px 0;
 }
 
-.modal_menu{
-    position: absolute;
-    width: 100%;
-    height: 1000px;
-    z-index: 3;
-    background-color: rgba(0,0,0, 0.6);
-    display: none;
-}
 
 /*--------------------modal responsive-----------------*/
 
@@ -111,10 +103,10 @@ body{
 .modal_search{
     position: absolute;
     width: 100%;
-    height: 1000px;
+    height: 100000px;
     background-color:rgba(0,0,0, 0.6);
     text-align: center;
-    z-index: 1 ; 
+    z-index: 3; 
     transition: all 3s ease;
     display: none;
 }
@@ -170,31 +162,14 @@ body{
     justify-content: end;
 }
 
-
-.open-search{
-    width: 550px;
-}
-
-
 /*-----------MENU MODAL-----*/
+
 .responsive_nav_menu{
     display: none;
     color: white;
     font-size: 25px;
 }
 
-.modal_responsive_menu{
-    width: 100px;
-    height: 150px;
-    background-color: rgba(0,0,0,0.6);
-    position: absolute;
-    right: 0;
-    border-radius: 10px;
-}
-.modal_responsive_menu #ul_bannerHead{
-    flex-direction: row;
-    justify-content: space-around;
-}
 
 /*-------CART MODAL-------*/
 .modal_cart{
@@ -276,11 +251,12 @@ body{
     background-color: #b30724d0;
 }
 
-
+/*-----class public-----------*/
 .change_click-item{
     background-color: white;
     border-radius: 20px;
 }
+
 .field_close{
     display: none;
 }
@@ -522,9 +498,7 @@ main{
         justify-content: space-around;
         bottom: unset;
     }
-    .modal_responsive_menu{
-        margin-top: 2px;
-    }
+   
 
     .responsive_nav_menu{
         display: block;
@@ -572,7 +546,7 @@ main{
 
     .modal_search{
         margin-bottom: 50px;
-        width: 90%;
+        width: 100%;
         left: unset;
     }
     .input_search_modal{
