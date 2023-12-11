@@ -1,0 +1,140 @@
+
+#produces_logo 
+{
+    width: 100%;
+    height: 700px;          
+    background-color: white;
+    position: relative;
+    top: 10px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+#title_produce 
+{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.produce_item 
+{
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px rgba(51, 43, 43, 0.2);
+    box-sizing: border-box;
+}
+
+.produce_item:hover 
+{
+    border: 2px solid var(--hoverColor);
+    transition-delay: 0.2s;
+}
+
+#list_produce 
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.produce_img img 
+{
+    object-fit: contain;
+    width: 60%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.produce_img 
+{
+    text-align: center;
+}
+
+.produce_info_container 
+{
+    padding: 10px;
+
+}
+
+.produce_name 
+{
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.produce_price 
+{
+    color: var(--logoColor);
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.produce_activity 
+{
+    margin: 25px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button_buy button 
+{
+    background-color: white;
+    border: 2px solid var(--logoColor);
+    border-radius: 5px;
+    color: var(--logoColor);
+    padding: 7px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.button_buy button:active 
+{
+    color: white;
+    background-color: var(--logoColor);
+    transform: scale(0.8);
+    transition: 0.1s;
+}
+
+.button_save i 
+{
+    font-size: 25px;
+    color: var(--clickChange);
+    cursor: pointer;
+    margin-top: 3px;
+
+}
+
+.button_save i:hover 
+{
+    color: var(--logoColor);
+}
+
+.heart_item 
+{
+    font-weight: 10;
+    text-align: end;
+    color: var(--clickChange);
+    display: flex;
+    justify-content: end;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.heart_item i 
+{
+    font-size: 20px;
+    color: var(--clickChange);
+    transition: 0.2s ease;
+}

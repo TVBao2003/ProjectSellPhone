@@ -1,0 +1,158 @@
+
+.button_style 
+{
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: var(--logoColor) solid 1.5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.button_style:hover 
+{
+    background-color: var(--logoColor);
+    color: white;
+}
+
+
+.icon_close 
+{
+    cursor: pointer;
+    transition: 0.5s;
+    /* transform: skew(45deg, -45deg); */
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.icon_close:hover 
+{
+    background-color: #b30724d0;
+}
+
+
+.change_click-item 
+{
+    background-color: white;
+    border-radius: 20px;
+}
+
+.field_close 
+{
+    display: none;
+}
+
+.field_open 
+{
+    display: block;
+}
+
+.dataProducts-SpaceBetween 
+{
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.dataProducts_style 
+{
+    width: 100%;
+    border-top: 1px solid var(--clickChange);
+    border-bottom: 1px solid var(--clickChange);
+    padding: 5px;
+    transition: 0.5s ease;
+}
+
+
+.dataProducts_button--pop 
+{
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--clickChange);
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px 5px 0 5px;
+    cursor: pointer;
+    color: var(--clickChange);
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.dataProducts_button--buy 
+{
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--clickChange);
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    color: var(--clickChange);
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.dataProducts_button--buy i 
+{
+    font-size: 30px;
+    position: relative;
+    right: 9px;
+    top: -3px;
+}
+
+.dataProducts_button--pop i 
+{
+    font-size: 30px;
+    position: relative;
+    right: 9px;
+    top: -3px;
+}
+
+.dataProducts_contain 
+{
+    display: flex;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+}
+
+
+.dataProducts_button--buy:hover 
+{
+    border: 3px solid rgb(60, 255, 0);
+    color: rgb(60, 255, 0);
+}
+
+.dataProducts_button--pop:hover 
+{
+    border: 3px solid rgb(255, 181, 33);
+    color: rgb(255, 170, 0);
+}
+
+.dataProducts_contain:hover 
+{
+    background-color: var(--hoverColor);
+    justify-content: space-between;
+}
+
+.dataProducts_contain:hover .dataProducts_button--pop 
+{
+    display: block;
+}
+
+.dataProducts_contain:hover .dataProducts_button--buy 
+{
+    display: block;
+}
+
+.dataProducts_contain:hover .dataProducts_style 
+{
+    width: 450px;
+    background-color: var(--hoverColor);
+    color: white;
+    border-color: var(--logoColor);
+    cursor: pointer;
+}

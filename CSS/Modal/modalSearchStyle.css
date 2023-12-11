@@ -1,0 +1,75 @@
+
+.modal_search 
+{
+    position: absolute;
+    width: 100%;
+    height: 100000px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    z-index: 3;
+    transition: all 3s ease;
+    display: none;
+}
+
+.modal_button_search 
+{
+    width: 80%;
+    height: 500px;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+}
+
+.modal_search--header 
+{
+    width: 95%;
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input--search 
+{
+    width: 85%;
+    padding: 5px;
+    transition: all 1s ease;
+    background-color: white;
+    outline: unset;
+    border: 1.5px solid var(--logoColor);
+    flex: 9;
+}
+
+.input--search:focus 
+{
+    border: 2px solid var(--logoColor);
+}
+
+.button--search 
+{
+    margin-left: 10px;
+    flex: 1;
+}
+
+.modal_search--body 
+{
+    width: 100%;
+    height: 380px;
+
+    position: relative;
+    overflow-y: scroll;
+}
+
+.modal_search--footer 
+{
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: end;
+}
