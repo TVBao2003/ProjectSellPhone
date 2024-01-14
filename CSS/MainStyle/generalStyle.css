@@ -43,7 +43,7 @@
 
 .field_open 
 {
-    display: block;
+    display: flex;
 }
 
 .dataProducts-SpaceBetween 

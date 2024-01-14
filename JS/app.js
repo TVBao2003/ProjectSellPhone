@@ -6,12 +6,12 @@ var listDataProductsAddCart = [];
 
 
 elementsProduceAct.forEach((e, index)=>{
-    var heartBlock = e.querySelector(".heart_item");
-    var iconHeart = heartBlock.querySelector("i");
-    var isLiked = false;
-    var buttonSaveElement = e.querySelector(".button_save");
+    let heartBlock = e.querySelector(".heart_item");
+    let iconHeart = heartBlock.querySelector("i");
+    let isLiked = false;
+    let buttonSaveElement = e.querySelector(".button_save");
     buttonSaveElement.innerHTML = "<i class='bx bx-cart-alt'></i>";
-    var informationProduct = e.previousElementSibling;
+    let informationProduct = e.previousElementSibling;
     
 
     //----> change color of block of heart
@@ -31,7 +31,7 @@ elementsProduceAct.forEach((e, index)=>{
     }
 
     //---> change the cart icon to the check icon
-    var dataProduct = {};
+    let dataProduct = {};
     buttonSaveElement.onclick = ()=>{
         let nameProduct = informationProduct.querySelector('.produce_name').textContent;
         let priceProduct = informationProduct.querySelector('.produce_price').textContent;
@@ -67,13 +67,21 @@ document.querySelectorAll('.produce_item').forEach((item, index)=>{
 //----elements of nav-----------
 
 var listItems = document.querySelectorAll('.list-items');
+
 var isOpen = false;
 
 listItems.forEach((item, index)=>{
     //------methods change modal------------
     
 //------Primary Part--------------------
+    //----index = 0 => Modal Search:
+    //----index = 1 => Modal Menu:
+    //----index = 2 => Modal Call;
+    //----index = 3 => Modal Cart:
+    //----index = 4 => new Page;
+
     if(index === 0){
+        //---------create variables---------
         isOpen = false;
         let aElement = item.querySelector('a');
         let elementSearchModal = document.querySelector(".modal_search");
@@ -81,26 +89,44 @@ listItems.forEach((item, index)=>{
         let bodySearchModal = elementSearchModal.querySelector(".modal_search--body");
         let inputSearchElement = bodySearchModal.parentElement.firstElementChild.firstElementChild;
         let btnSearch = inputSearchElement.nextElementSibling;
-        let arrayNameProducts = [];
-
-        listProducts.forEach((item)=>{
-            arrayNameProducts.push(item.Name);
-        })
-
+        
         btnSearch.onclick = ()=>{
+
+            let previousItems = bodySearchModal.querySelectorAll('.dataProducts_contain');
+            //------delete all previous items----------
+            if(previousItems.length != 0){
+                previousItems.forEach((pre_i)=>{
+                    bodySearchModal.removeChild(pre_i);
+                })
+            }
+
+
             let valueInputSearch = inputSearchElement.value;
-            console.log(valueInputSearch);
-            listProducts.forEach((item)=>{
-                if(valueInputSearch === item.Name)
-                {
-                    let Name = item.Name;
-                    let Img = item.Image;
-                    let Price = item.Price;
-                    addDataToModal(bodySearchModal, Name, Price, Img);
-                    inputSearchElement.value = "";
-                }
-            })
+            //-------search items--------
+            if(valueInputSearch.length != 0){
+                listProducts.forEach((e)=>{
+                    if(e.Name.includes(valueInputSearch, 0))
+                    {                             
+                        let Name = e.Name;
+                        let Img = e.Image;
+                        let Price = e.Price;
+                        addDataToModal(bodySearchModal, Name, Price, Img);
+                        inputSearchElement.value = "";
+                    }
+                })
+                //-----delete an item----------
+                let btnDelete = bodySearchModal.querySelectorAll('.dataProducts_button--pop');
+                console.log(btnDelete)
+                btnDelete.forEach((btn_del) => {
+                    btn_del.onclick = () =>{
+                        bodySearchModal.removeChild(btn_del.parentElement.parentElement);
+                      
+                    }
+                })
+            }
         }
+
+        //---------Close or Open Modal-------------
         item.onclick = () =>{
            openModal(isOpen, item, elementSearchModal, aElement);
          }
@@ -108,10 +134,164 @@ listItems.forEach((item, index)=>{
         btnClose.onclick = ()=>{
            closeModal(isOpen, item, elementSearchModal, aElement);
         }
+
+        elementSearchModal.onclick = (e) =>{
+            if(e.target == e.currentTarget){
+                closeModal(isOpen, item, elementSearchModal, aElement);
+            }
+        }
     }
 
+//---------Modal Menu-------
+    if(index === 1){
+        isOpen = false;
+        let aElement = item.querySelector('a');
+        let elementMenuModal = document.querySelector('.modal_menu');
+        let btnClose = elementMenuModal.querySelector('.button--close');
+        let iconClose = elementMenuModal.querySelector('.icon_close');
+        let bodyMenuModal = elementMenuModal.querySelector('.modal_menu--body');
+        let list_types = bodyMenuModal.querySelectorAll('.menu_type--item');
+        let e_screenMenu = elementMenuModal.querySelector('.screen_menu--title');
 
-    //--------is cart item------
+        let html_screen_SamSung = `<strong>SamSung</strong>`;
+        let html_screen_iPhone = `<strong>iPhone</strong>`;
+        
+        item.onclick = () =>{
+            openModal(isOpen, item, elementMenuModal, aElement);
+        }
+
+        btnClose.onclick = () =>{
+            closeModal(isOpen, item, elementMenuModal, aElement);
+        }
+
+        iconClose.onclick = () =>{
+            closeModal(isOpen, item, elementMenuModal, aElement);
+        }
+
+        elementMenuModal.onclick = (e) =>{
+            if(e.target == e.currentTarget){
+                closeModal(isOpen, item, elementMenuModal, aElement);
+            }
+        }
+
+
+
+        listProducts.forEach((e) =>{
+            if(e.Name.includes("iPhone", 0)){
+                html_screen_iPhone += `
+                    <div class="screen_menu--item">
+                        <a href="#">
+                            <span>${e.Name}</span>
+                        </a>
+                    </div>
+                `
+            }
+        })
+
+        listProducts.forEach((e) =>{
+            if(e.Name.includes("SamSung ", 0)){
+                html_screen_SamSung += `
+                    <div class="screen_menu--item">
+                        <a href="#">
+                            <span>${e.Name}</span>
+                        </a>
+                    </div>
+                `
+            }
+        })
+
+
+        list_types.forEach( (e, index) =>{
+            e.onclick = ()=>{
+                if(index == 0){
+                    e_screenMenu.innerHTML = "";
+                    e_screenMenu.innerHTML = html_screen_SamSung + html_screen_iPhone
+                }
+
+                if(index === 1){
+                    e_screenMenu.innerHTML = "";
+                    e_screenMenu.innerHTML = "There is not goods at index: 1";
+                }
+
+                if(index === 2){
+                    e_screenMenu.innerHTML = "";
+                    e_screenMenu.innerHTML = "There is not goods at index: 2";
+                }
+                
+                if(index === 3){
+                    e_screenMenu.innerHTML = "";
+                    e_screenMenu.innerHTML = "There is not goods at index: 3";
+                }
+
+                if(index === 4){
+                    e_screenMenu.innerHTML = "";
+                    e_screenMenu.innerHTML = "There is not goods at index: 4";
+                }
+
+                if(index === 5){
+                    e_screenMenu.innerHTML = "";
+                    e_screenMenu.innerHTML = "There is not goods at index: 5";
+                }
+            }
+        })
+        
+
+    }
+
+//----------Modal Call------
+    if(index === 2)
+    {
+        //element base
+        isOpen = false;
+        let aElement = item.querySelector('a');
+        let elementCallModal = document.querySelector('.modal_call');
+        let bodyCallModal = elementCallModal.querySelector('.modal_call--body');
+        let btnClose = elementCallModal.querySelector('.button--close');
+        let iconClose = elementCallModal.querySelector('.icon_close');
+
+        let list_types = bodyCallModal.querySelectorAll('.call_item--link');
+        item.onclick = ()=>{
+            openModal(isOpen, item, elementCallModal, aElement);
+        }
+
+        iconClose.onclick = () =>{
+            closeModal(isOpen, item, elementCallModal, aElement);
+        }
+
+        btnClose.onclick = () =>{
+            closeModal(isOpen, item, elementCallModal, aElement);
+        }
+
+        elementCallModal.onclick = (e) =>{
+            if(e.target == e.currentTarget){
+                closeModal(isOpen, item, elementCallModal, aElement);
+            }
+        }
+
+        list_types.forEach( (e, index) =>{
+            e.onmouseover = ()=>{
+                if(index == 0) {
+                    e.querySelector('span').innerHTML = '0865466071';
+                }
+
+                if(index == 1){
+                    e.querySelector('span').innerHTML = 'truongvanbao111333@gmail.com';
+                }
+            }
+            e.onmouseleave = () =>{
+                if(index == 0) {
+                    e.querySelector('span').innerHTML = 'Phone Number';
+                }
+
+                if(index == 1){
+                    e.querySelector('span').innerHTML = 'Gmail';
+                }
+            }
+            e.onm
+        })
+
+    }
+//----------Modal Cart------
     if(index === 3)
     {
         //---element base
@@ -126,7 +306,7 @@ listItems.forEach((item, index)=>{
         let btnClose = elementCartModal.querySelector(".button--close");
         let bodyCartModal = elementCartModal.querySelector('.modal_cart--body');
         
-        //-------click to Close----------
+        //-------click to Close------e
         iconClose.onclick = () =>{
             closeModal(isOpen, item, elementCartModal, aElement);
         }
@@ -187,7 +367,7 @@ listItems.forEach((item, index)=>{
         
                     //--------pop product out cart
                     bodyCartModal.removeChild(element.parentElement.parentElement);
-                   
+                   //-------design nav css style. 
                 }
             })
         }

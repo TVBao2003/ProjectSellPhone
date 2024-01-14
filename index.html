@@ -7,14 +7,17 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="CSS/Root/rootStyle.css">
-        <link rel="stylesheet" href="CSS/Modal/modalCartStyle.css">
-        <link rel="stylesheet" href="CSS/Modal/modalMenuStyle.css">
-        <link rel="stylesheet" href="CSS/Modal/modalSearchStyle.css">
-        <link rel="stylesheet" href="CSS/MainStyle/bannerStyle.css">
-        <link rel="stylesheet" href="CSS/MainStyle/generalStyle.css">
-        <link rel="stylesheet" href="CSS/MainStyle/itemStyle.css">
-        <link rel="stylesheet" href="CSS/Responsive/responsiveStyle.css">
+        <link rel="stylesheet" href="./CSS/Root/rootStyle.css">
+        <link rel="stylesheet" href="./CSS/Modal/modalSearchStyle.css">
+        <link rel="stylesheet" href="./CSS/Modal/modalMenuStyle.css">
+        <link rel="stylesheet" href="./CSS/Modal/modalCallStyle.css">
+        <link rel="stylesheet" href="./CSS/Modal/modalCartStyle.css">
+        <link rel="stylesheet" href="./CSS/Modal/modalBarStyle.css">
+        <link rel="stylesheet" href="./CSS/MainStyle/bannerStyle.css">
+        <link rel="stylesheet" href="./CSS/MainStyle/generalStyle.css">
+        <link rel="stylesheet" href="./CSS/MainStyle/itemStyle.css">
+        <link rel="stylesheet" href="./CSS/Responsive/responsiveStyle.css">
+     
     </head>
     <body>
         <header>
@@ -75,7 +78,119 @@
                         </div>
                     </div>
                 </div>
-                
+                <div class="modal_menu">
+                    <div class="modal_button--menu">
+                        <div class="modal_menu--header">
+                            <p>Welcome Menu</p>
+                            <i class='bx bx-x icon_close'></i>
+                        </div>
+                        <div class="modal_menu--body">
+                            <ul class="menu_type">
+                                <li class="menu_type--item">
+                                    <div class="menu_item--name">
+                                        <img src="https://cellphones.com.vn/media/icons/menu/icon-cps-3.svg" alt="">
+                                        <p>Smart Phone</p>
+                                    </div>
+                                    <i class='bx bx-chevron-right'></i>
+                                </li>
+                                <li class="menu_type--item">
+                                    <div class="menu_item--name">
+                                        <img src="https://cdn2.cellphones.com.vn/x/media/icons/menu/icon-cps-380.svg" alt="">    
+                                        <p>LapTop</p>
+                                    </div>
+                                    <i class='bx bx-chevron-right'></i>
+                                </li>
+                                <li class="menu_type--item">
+                                    <div class="menu_item--name">
+                                        <img src="https://cellphones.com.vn/media/icons/menu/icon-cps-220.svg" alt="">    
+                                        <p>Earphone</p>
+                                    </div>
+                                    <i class='bx bx-chevron-right'></i>
+                                </li>
+                                <li class="menu_type--item">
+                                    <div class="menu_item--name">
+                                        <img src="https://cellphones.com.vn/media/icons/menu/icon-cps-610.svg" alt="">    
+                                        <p>Watch</p>
+                                    </div>
+                                    <i class='bx bx-chevron-right'></i>
+                                </li>
+                                <li class="menu_type--item">
+                                    <div class="menu_item--name">
+                                        <img src="https://cdn2.cellphones.com.vn/x/media/icons/menu/icon_cpu.svg" alt="">    
+                                        <p>PC, Screen</p>
+                                    </div>
+                                    <i class='bx bx-chevron-right'></i>
+                                </li>
+                                <li class="menu_type--item">
+                                    <div class="menu_item--name">
+                                        <img src="https://cellphones.com.vn/media/icons/menu/icon-cps-1124.svg" alt="">    
+                                        <p>Tivi</p>
+                                    </div>
+                                    <i class='bx bx-chevron-right'></i>
+                                </li>                           
+                            </ul>
+                        </div>
+                        <div class="modal_menu--footer">
+                            <button class="button--close button_style">Close</button>
+                        </div>
+                    </div>
+                    <article class="screen_menu">
+                        <div class="screen_menu--title"></div>
+                    </article>
+                </div>
+
+                <div class="modal_call">
+                    <div class="modal_button--call">
+                        <div class="modal_call--header">
+                            <p>Welcome Call</p>
+                            <i class='bx bx-x icon_close'></i>
+                        </div>
+                        <div class="modal_call--body">
+                            <ul class="call_type">
+                                <li class="call_type--item">
+                                    <a href="#" class="call_item--link">
+                                        <div class="call_item--name">
+                                            <i class='bx bxs-phone-call' ></i>
+                                            <span>Phone Number</span>
+                                        </div>
+                                        <i class='bx bx-chevron-right'></i>
+                                    </a>
+                                </li>
+                                <li class="call_type--item">
+                                    <a href="#" class="call_item--link">
+                                        <div class="call_item--name">
+                                            <i class='bx bxl-gmail' ></i>
+                                            <span>Gmail</span>
+                                        </div>
+                                        <i class='bx bx-chevron-right'></i>
+                                    </a>
+                                </li>
+                                <li class="call_type--item">
+                                    <a href="https://www.facebook.com/truong.vanbao.2035/" class="call_item--link">
+                                        <div class="call_item--name">
+                                            <i class='bx bxl-facebook-square'></i>
+                                            <span>Facbook</span>
+                                        </div>
+                                        <i class='bx bx-chevron-right'></i>
+                                    </a>
+                                </li>
+                                <li class="call_type--item">
+                                    <a href="#" class="call_item--link">
+                                        <div class="call_item--name">
+                                            <i class='bx bxl-tiktok'></i>
+                                            <span>TikTok</span>
+                                        </div>
+                                        <i class='bx bx-chevron-right'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal_call--footer">
+                            <button class="button--close button_style"> Close</button>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="modal_cart">
                     <div class="modal_button_cart">
                         <div class="modal_cart--header">
@@ -381,4 +496,5 @@
     <script src="JS/root.js"></script>
     <script src="JS/function.js"></script>
     <script src="JS/app.js"> </script>
+    <script src="JS/test.js"></script>
 </html>

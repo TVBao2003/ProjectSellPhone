@@ -1,6 +1,120 @@
-.responsive_nav_menu 
-{
+.modal_menu{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.6);
+    height:100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
     display: none;
-    color: white;
+}
+
+.modal_button--menu{
+    background-color: white;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    margin: 10px 10%;
+    border-radius: 30px;
+}
+
+.modal_menu--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 10px;
+    box-sizing: border-box;
     font-size: 25px;
+    color: white;
+    height: 70px;
+    width: 100%;
+    background-color: var(--logoColor);
+    border-radius: 30px 30px 0 0;
+}
+
+.modal_menu--body{
+    width: 100%;
+    height: 380px;
+    background-color: aqua;
+}
+
+
+.modal_menu--footer{
+    height: 50px;
+    width: 95%;
+    position: absolute;
+    bottom: 0;
+    text-align: end;
+}
+
+.menu_type{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.menu_type--item{
+    height: 40px;
+    border-top: 1px solid rgb(159, 157, 157);
+    border-bottom: 1px solid rgb(159, 157, 157);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.menu_type--item:hover {
+    background-color: #dbdbdb;
+    color: var(--logoColor);
+}
+
+.menu_type--item i{
+    font-size: 20px;
+    padding-right: 10px;
+}
+.menu_item--name{
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+.menu_item--name img{
+    height: 25px;
+    width: 25px;
+    padding-right: 5px;
+}
+
+
+.screen_menu{
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    margin: 10px ;
+    border-radius: 25px;
+    overflow-y: scroll;
+}
+
+.screen_menu--title{
+    padding: 20px;
+    font-size: 21px;
+}
+.screen_menu--item{
+    height: 30px;
+    padding: 10px;
+    font-size: 15px;
+
+}
+.screen_menu--item a{
+    font-family: none;
+    text-decoration: none;
+    font-weight: 100;
+    font-style: normal;
+    color: rgb(166, 160, 160);
+}
+.screen_menu--item a :hover{
+    color: var(--logoColor);
 }

@@ -97,3 +97,4 @@ function addDataToModal(bodyModal, dataName, dataPrice, dataImg){
     bodyModal.appendChild(containProductSaved);
 }
 
+// 
