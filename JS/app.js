@@ -155,7 +155,7 @@ listItems.forEach((item, index)=>{
 
         let html_screen_SamSung = `<strong>SamSung</strong>`;
         let html_screen_iPhone = `<strong>iPhone</strong>`;
-        
+        // Close or Open Modal
         item.onclick = () =>{
             openModal(isOpen, item, elementMenuModal, aElement);
         }
@@ -175,7 +175,7 @@ listItems.forEach((item, index)=>{
         }
 
 
-
+        // get data is iPhone
         listProducts.forEach((e) =>{
             if(e.Name.includes("iPhone", 0)){
                 html_screen_iPhone += `
@@ -187,7 +187,7 @@ listItems.forEach((item, index)=>{
                 `
             }
         })
-
+        // get data is SamSung
         listProducts.forEach((e) =>{
             if(e.Name.includes("SamSung ", 0)){
                 html_screen_SamSung += `
@@ -200,7 +200,7 @@ listItems.forEach((item, index)=>{
             }
         })
 
-
+        // display data
         list_types.forEach( (e, index) =>{
             e.onclick = ()=>{
                 if(index == 0){
@@ -250,6 +250,7 @@ listItems.forEach((item, index)=>{
         let iconClose = elementCallModal.querySelector('.icon_close');
 
         let list_types = bodyCallModal.querySelectorAll('.call_item--link');
+        // Open or Close Modal
         item.onclick = ()=>{
             openModal(isOpen, item, elementCallModal, aElement);
         }
@@ -267,7 +268,7 @@ listItems.forEach((item, index)=>{
                 closeModal(isOpen, item, elementCallModal, aElement);
             }
         }
-
+        // Display information when click 
         list_types.forEach( (e, index) =>{
             e.onmouseover = ()=>{
                 if(index == 0) {
@@ -287,7 +288,7 @@ listItems.forEach((item, index)=>{
                     e.querySelector('span').innerHTML = 'Gmail';
                 }
             }
-            e.onm
+            
         })
 
     }

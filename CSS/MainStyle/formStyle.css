@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+body{
+    background-color: rgb(176, 175, 175);
+    height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+#form_sign_in{
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    border-radius: 40px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.form_contain--main{
+    background-color: rgb(255, 255, 255);
+    height: 90%;
+    width: 90%;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header{
+    color: var(--logoColor);
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer a{
+    font-family: none;
+    text-decoration: none;
+    color: var(--logoColor);
+}
+
+footer a:hover{
+    color:  rgb(255, 47, 47);
+}
+.form_input{
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.form_input label{
+    font-size: 15px;
+}
+
+.form_input input{
+    font-family: none;
+    font-weight: 300;
+    height: 25px;
+    padding: 5px;
+    outline: none;
+}
+.form_input input:hover{
+    border: 2px solid rgb(0, 254, 68);
+}
+
+
+.form_input span{
+    font-size: 12px;
+    font-weight: 50;
+    font-family: none;
+}
+
+.form_submit{
+    display: flex;
+    justify-content: center;
+}
+
+.form_submit input{
+    padding: 5px 8px;
+    border: 1px solid var(--clickChange);
+    border-radius: 15px;
+    color: var(--clickChange);
+}
+
+.form_submit input:hover{
+    border: 1px solid var(--logoColor);
+    color:  var(--logoColor);
+    background-color: white;
+}
+
+
+

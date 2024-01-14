@@ -1,4 +1,7 @@
+.border--green{
+    border: 2px solid  rgb(0, 254, 68);
 
+}
 .button_style 
 {
     padding: 5px 15px;
@@ -94,8 +97,9 @@
     transition: all 0.3s ease;
 }
 
-.dataProducts_button--buy i 
+.dataProducts_button--buy a i 
 {
+    color: var(--clickChange);
     font-size: 30px;
     position: relative;
     right: 9px;
@@ -125,7 +129,10 @@
     border: 3px solid rgb(60, 255, 0);
     color: rgb(60, 255, 0);
 }
-
+.dataProducts_button--buy a i:hover 
+{
+    color: rgb(60, 255, 0);
+}
 .dataProducts_button--pop:hover 
 {
     border: 3px solid rgb(255, 181, 33);

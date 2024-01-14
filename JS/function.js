@@ -81,7 +81,11 @@ function addDataToModal(bodyModal, dataName, dataPrice, dataImg){
     btnPopProduct.classList.add("dataProducts_button--pop");
     btnBuyProduct.classList.add("dataProducts_button--buy");
              
-    btnBuyProduct.innerHTML = "<i class='bx bx-check'></i>";
+    btnBuyProduct.innerHTML = `
+                                <a href="#">
+                                    <i class='bx bx-check'></i>
+                                </a>
+                             `;
     btnPopProduct.innerHTML = "<i class='bx bx-x'></i>";
 
     //-----add span and image elements in div tag-------
