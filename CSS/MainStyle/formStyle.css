@@ -102,18 +102,20 @@ footer a:hover{
 
 .form_submit input{
     padding: 5px 8px;
-    border: 1px solid var(--clickChange);
     border-radius: 15px;
-    color: var(--clickChange);
-}
-
-.form_submit input:hover{
-    border: 1px solid var(--logoColor);
-    color:  var(--logoColor);
-    background-color: white;
+    border: 1px solid;
 }
 
 
+
+.isValid{
+    color: var(--logoColor);
+    border: 2px solid var(--logoColor);
+}
+
+.border--red{
+    border: 2px solid  rgb(251, 15, 15);
+}
 
 .border--green{
     border: 2px solid  rgb(0, 254, 68);

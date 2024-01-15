@@ -152,7 +152,6 @@ listItems.forEach((item, index)=>{
         let bodyMenuModal = elementMenuModal.querySelector('.modal_menu--body');
         let list_types = bodyMenuModal.querySelectorAll('.menu_type--item');
         let e_screenMenu = elementMenuModal.querySelector('.screen_menu--title');
-
         let html_screen_SamSung = `<strong>SamSung</strong>`;
         let html_screen_iPhone = `<strong>iPhone</strong>`;
         // Close or Open Modal
