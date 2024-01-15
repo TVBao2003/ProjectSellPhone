@@ -1,8 +1,4 @@
-:root{
-    --logoColor: #DF052B;
-    --clickChange: #9d9d9d;
-    --hoverColor: #fb5151;
-}
+
 *{
     padding: 0;
     margin: 0;
@@ -58,7 +54,7 @@ footer{
     justify-content: center;
 }
 footer a{
-    font-family: none;
+    font-family: sans-serif;
     text-decoration: none;
     color: var(--logoColor);
 }
@@ -76,10 +72,11 @@ footer a:hover{
 
 .form_input label{
     font-size: 15px;
+    font-weight: 900;
 }
 
 .form_input input{
-    font-family: none;
+    font-family: sans-serif;
     font-weight: 300;
     height: 25px;
     padding: 5px;
@@ -91,9 +88,10 @@ footer a:hover{
 
 
 .form_input span{
-    font-size: 12px;
-    font-weight: 50;
-    font-family: none;
+    color: #333;
+    font-size: 11px;
+    font-weight: 500;
+    font-family:  sans-serif;
 }
 
 .form_submit{
