@@ -13,7 +13,7 @@ body{
     align-items: center;
 }
 
-#form_sign_in{
+.form_sign{
     width: 400px;
     height: 500px;
     background-color: white;
@@ -44,7 +44,6 @@ header{
 }
 
 main{
-    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -120,4 +119,12 @@ footer a:hover{
 .border--green{
     border: 2px solid  rgb(0, 254, 68);
 
+}
+
+
+.form_up{
+    height: 650px;
+}
+.main_form--up{
+    height: 85%;
 }

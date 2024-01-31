@@ -3,17 +3,23 @@
     z-index: 3;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: none;
+    top: 100px;
 }
 
 .modal_button--call{
+    position: absolute;
+    top: 5%;
+    left: 30%;
     width: 500px;
     height: 500px;
     background-color: white;
     border-radius: 30px;
-    margin: 10px auto;
+    margin: 0 auto;
+    animation-name: displayModal;
+    animation-duration: 0.5s;
 }
 
 .modal_call--header{

@@ -1,11 +1,11 @@
 .modal_cart 
 {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 3;
-    top: 0;
+    top: 100px;
     bottom: 0;
     right: 0;
     left: 0;
@@ -22,6 +22,9 @@
     overflow: hidden;
     margin: 40px auto;
     position: relative;
+    animation-name: displayModal;
+    animation-duration: 0.5s;
+  
 }
 
 .modal_cart--header 

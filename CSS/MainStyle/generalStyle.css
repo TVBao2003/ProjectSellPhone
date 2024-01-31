@@ -59,7 +59,7 @@
     border-top: 1px solid var(--clickChange);
     border-bottom: 1px solid var(--clickChange);
     padding: 5px;
-    transition: 0.5s ease;
+    transition: 0.8s ease;
 }
 
 
@@ -116,7 +116,7 @@
     display: flex;
     margin-top: 10px;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: 0.1s ease;
 
 }
 
@@ -159,4 +159,12 @@
     color: white;
     border-color: var(--logoColor);
     cursor: pointer;
+}
+@keyframes displayModal {
+    0%{
+        top: -1000px;
+    }
+    100%{
+        top: 0px;
+    }
 }

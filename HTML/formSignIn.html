@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="../CSS/MainStyle/formStyle.css">
 </head>
 <body>
-    <div id="form_sign_in">
+    <form action="index.html" class="form_sign">
         <div class="form_contain--main">
             <header>
                 <span>Sign in</span>
             </header>
             <main>
                 <div class="form_input">
-                    <label for="">User Name or Email Address</label>
-                    <input placeholder="Enter Name" type="text">
+                    <label for="#input_email">User Name or Email Address</label>
+                    <input id="input_email" placeholder="Enter Name" type="text">
                     <span title="email"></span>
                 </div>
                 <div class="form_input">
@@ -29,10 +29,10 @@
                 </div>
             </main>
             <footer>
-                <a href="#">Sign up</a>
+                <a href="formSignUp.html">Sign up</a>
             </footer>
         </div>
-    </div>
+    </form>
 </body>
 <script src="../JS/formApp.js"></script>
 </html>
