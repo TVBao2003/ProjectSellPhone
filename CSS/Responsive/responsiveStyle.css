@@ -8,7 +8,7 @@
         top: 100px;
         background-color: rgba(0, 0, 0, 0.6);
         display: none;
-
+        
     }
 
     #ul_bannerHead 
@@ -21,23 +21,48 @@
         justify-content: space-around;
         bottom: unset;
     }
-    
+    /*----Modal Menu----*/
     .modal_menu{
-        flex-wrap:wrap;
-    }
-    .screen_menu{
-        margin: 10px auto;
-        width: 500px;
+        justify-content: unset;
+        
     }
     .screen_menu--title{
-        width: 500px;
-
+        font-size: 98%;
+    }
+    .screen_menu--item{
+        padding: 5px;
+        font-size: 70%;
+    }
+    .modal_menu--header{
+        font-size: 85%;
+    }
+    .modal_menu--body{
+        font-size: 70%;
+    }
+    .modal_button--menu{
+        position: relative;
+        left: unset;
+        width: 50%;
+        left: 1%;
+        display: block;
     }
 
-    .modal_button--menu{
+    .screen_menu{
+        position: absolute;
+        right: 1%;
+        width: 45%;
+    }
+    /*-----Modal Call--------*/
+    .modal_button--call{
+        width: 70%;
+        position: unset;
         margin: 10px auto;
     }
+    .call_item--link{
+        font-size: 17px;
+    }
 
+    /*-----------------------*/
     .responsive_nav_menu 
     {
         display: block;

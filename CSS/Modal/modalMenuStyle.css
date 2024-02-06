@@ -11,15 +11,16 @@
 
 .modal_button--menu{
     background-color: white;
-    height: 500px;
     width: 500px;
-    position: relative;
-    margin: 10px 10%;
+    height: 500px;
     border-radius: 30px;
     animation-name: displayModal;
     animation-duration: 0.5s;
+    margin-top: 10px;
 }
-
+.flex_around{
+    justify-content: space-around;
+}
 .modal_menu--header{
     display: flex;
     justify-content: space-between;
@@ -96,12 +97,11 @@
     width: 400px;
     height: 500px;
     background-color: white;
-    margin: 10px ;
     overflow-y: scroll;
     animation-name: displayModal;
     animation-duration: 0.5s;
-    position: absolute;
-    left: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .screen_menu--title{
