@@ -126,7 +126,7 @@ listItems.forEach((item, index)=>{
             }
         }
 
-        //---------Close or Open Modal-------------
+        //---------Close or Open Modal---------------
         item.onclick = () =>{
            openModal(isOpen, item, elementSearchModal, aElement);
          }
@@ -142,7 +142,7 @@ listItems.forEach((item, index)=>{
         }
     }
 
-//---------Modal Menu-------
+//------------Modal Menu--------------
     if(index === 1){
         isOpen = false;
         let aElement = item.querySelector('a');
@@ -154,7 +154,8 @@ listItems.forEach((item, index)=>{
         let e_screenMenu = elementMenuModal.querySelector('.screen_menu--title');
         let html_screen_SamSung = `<strong>SamSung</strong>`;
         let html_screen_iPhone = `<strong>iPhone</strong>`;
-        // Close or Open Modal
+
+        // Close or Open Modal:
         item.onclick = () =>{
             openModal(isOpen, item, elementMenuModal, aElement);
         }
@@ -174,7 +175,7 @@ listItems.forEach((item, index)=>{
         }
 
 
-        // get data is iPhone
+        //Get data is iPhone:
         listProducts.forEach((e) =>{
             if(e.Name.includes("iPhone", 0)){
                 html_screen_iPhone += `
@@ -199,7 +200,7 @@ listItems.forEach((item, index)=>{
             }
         })
 
-        // display data
+        // Display data
         list_types.forEach( (e, index) =>{
             e.onclick = ()=>{
                 if(index == 0){
@@ -233,8 +234,6 @@ listItems.forEach((item, index)=>{
                 }
             }
         })
-        
-
     }
 
 //----------Modal Call------

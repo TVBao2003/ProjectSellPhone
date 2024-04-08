@@ -1,3 +1,22 @@
+import { UserField, EmailField, PasswordField, ConfirmPasswordField, Users } from "./objects.js";
+import { DATA_USERS } from "./dataUser.js";
+
+var DATA_USERS_ORTHER = "data-users-orther";
+var dataUserOrther;
+
+//------------ Handle DATA -----------------
+if(JSON.parse(localStorage.getItem(DATA_USERS_ORTHER)))
+{
+    if(JSON.parse(localStorage.getItem(DATA_USERS_ORTHER)).length != 0)
+        dataUserOrther = JSON.parse(localStorage.getItem(DATA_USERS_ORTHER));
+    else dataUserOrther = JSON.parse(localStorage.getItem(DATA_USERS));
+
+}else{
+    localStorage.setItem(DATA_USERS_ORTHER, '[]');
+    dataUserOrther = JSON.parse(localStorage.getItem(DATA_USERS));
+}
+
+
 // var contain_form = document.querySelector('.form_contain--main');
 
 // var e_main_form = contain_form.querySelector('main');
@@ -5,66 +24,47 @@
 
 // var e_input_form = e_main_form.querySelectorAll('.form_input input');
 
-class FormSignIn
-{
-     constructor(id, header, main, footer){
-        this.id = id;
-        this.header = header;
-        this.main = main;
-        this.footer = footer;
-     }
-}
+var formSignIn = false;
 
-
-class FieldForm
-{
-    constructor(message, type, isSuccess){
-        this.message = message;
-        this.type = type;
-        this.isSuccess = isSuccess;
+//------ Method check user is valid
+function isValidUser(user, dataUser){
+    let emailExist = false;
+    let passwordExist = true;
+    for(let i=0; i<dataUser.length; i++){
+        if(dataUser[i].email === user.email)
+        {
+            emailExist = true;
+            if(dataUser[i].password === user.password)
+            {
+                return {
+                    isSuccess: true,
+                    emailFault: false,
+                    passwordFault: false
+                };
+            }
+            else
+            {
+                passwordExist = false;
+                break;
+            }
+        }
     }
+     return {
+        isSuccess: false,
+        emailFault: emailExist,
+        passwordFault: passwordExist
+    };
 }
 
-class Users{
-    constructor(name, email, password){
-        this.name = name;
-        this.email = email;
-        this.password = password;
-    }
-}
-class UserField extends FieldForm{
-    constructor(message, type, isSuccess){
-        super(message, type, isSuccess);
-
-    }
-}
-class EmailField extends FieldForm{
-    constructor(message, type, isSuccess, check){
-        super(message, type, isSuccess);
-        this.check = check;
-    }
-}
-
-class PasswordField extends FieldForm{
-    constructor(message, type, isSuccess, length) {
-        super(message, type, isSuccess);
-        this.length = length;
-    }
-}
-
-class ConfirmPasswordField extends PasswordField{
-    constructor(message, type, isSuccess, length) {
-        super(message, type, isSuccess, length);
-    }
-}
-
+//---- Method error notification -------------
 function isNotValid(container, span, object){
     container.classList.add("border--red");
     span.style.color = 'red';
     span.innerHTML = object.message;
     object.isSuccess = false;
 }
-    
+
+// -------------- Method Main -----------------------
 function Valid(mainElement, classListInput, submitElement)
 {   
     const email_field = new EmailField("This is not an email", "email", false, /^[A-Za-z][\w$.]+@[\w]+\.\w+$/);
@@ -76,14 +76,17 @@ function Valid(mainElement, classListInput, submitElement)
     let containInputs = e_main_form.querySelectorAll(classListInput);
     let e_submit_form = e_main_form.querySelector(submitElement);
     let e_form = e_main_form.parentElement.parentElement;
-    console.log(e_form)
 
     // if(containInputs.length === 2){
 
     // }
+
+    //---create user
     var user = new Users();
 
+    //---check this is a form sign in or sign up
     if(containInputs.length === 2){
+        formSignIn = true;
         user_field.isSuccess = true;
         confirm_password_field.isSuccess = true;
     }
@@ -92,22 +95,27 @@ function Valid(mainElement, classListInput, submitElement)
 
         let e_input_form = containInput.querySelector('input');
         let e_span_form = containInput.querySelector('span');
-            
-        
-        e_input_form.onclick = function(){
+         // --- Change when click---
+        e_input_form.onclick = function()
+        {
             this.classList.remove("border--red");
             this.classList.add("border--green");
             e_span_form.innerHTML = "";
         }
-       
-        e_input_form.oninput = function(){
+
+       // --- Change when input---
+        e_input_form.oninput = function()
+        {
+            this.classList.remove("border--red");
             this.classList.add("border--green");
-           
+            e_span_form.innerHTML = "";
         }
-        e_input_form.onblur = function(){
+
+        //---- Change when blur ---
+        e_input_form.onblur = function()
+        {
             this.classList.remove("border--green");
-    
-           
+            //------check are the fielde valid?
             if((!email_field.check.test(this.value) || this.value === "") && e_span_form.title === email_field.type){
                 // this.classList.add("border--red");
                 // e_span_form.style.color = 'red';
@@ -145,36 +153,66 @@ function Valid(mainElement, classListInput, submitElement)
                 // e_span_form.style.color = 'red';
                 // e_span_form.innerHTML = user_field.message;
                 // user_field.isSuccess = false;
-                isNotValid(this, e_span_form, )
+                isNotValid(this, e_span_form, user_field.type);
             }else if(e_span_form.title === user_field.type ){
                 user.name = this.value;
                 user_field.isSuccess = true;
-            }
-                
+            }   
         }
-        
     });
-    console.log(e_form)
+    //get button sumit
+    
+  
     let btnSubmit = e_submit_form.querySelector('input');
+
     btnSubmit.addEventListener("click", function(e){
+        //------check fields are Valid
         if(email_field.isSuccess && password_field.isSuccess && user_field.isSuccess && confirm_password_field.isSuccess){
-            console.log(user);
-            e.classList.add('isValid');
+            //------check this is a form sign in 
+            if(formSignIn===true){
+                if(JSON.parse(localStorage.getItem(DATA_USERS_ORTHER)).length != 0){
+                    dataUserOrther = JSON.parse(localStorage.getItem(DATA_USERS_ORTHER)); 
+                }else{
+                    dataUserOrther = JSON.parse(localStorage.getItem(DATA_USERS));
+                }
+                if(!isValidUser(user, dataUserOrther).isSuccess){//--- if this is a form sign in, we will check data from fields are valid
+                    containInputs.forEach(containInput=>{
+                        let e_input_form = containInput.querySelector('input');
+                        let e_span_form = containInput.querySelector('span');
+                        //---- the fields are not valid, it will error
+                        if(!isValidUser(user, dataUserOrther).emailFault && e_span_form.title === email_field.type)
+                            isNotValid(e_input_form, e_span_form, email_field);
+                        if(!isValidUser(user, dataUserOrther).passwordFault && e_span_form.title === password_field.type)
+                            isNotValid(e_input_form, e_span_form, password_field);   
+                    })
+                    e.preventDefault();
+                }
+            }else{
+                dataUserOrther.push(user);
+                localStorage.setItem(DATA_USERS_ORTHER,JSON.stringify(dataUserOrther));
+              
+               
+            } // ---- if this is a form sign up, we will push dataUserOrther array
          }else{
-            containInputs.forEach( containInput=>{
+            //------Loop input blocks
+            containInputs.forEach(containInput=>{
                 let e_input_form = containInput.querySelector('input');
                 let e_span_form = containInput.querySelector('span');
-                isNotValid(e_input_form, e_span_form, email_field);
-                isNotValid(e_input_form, e_span_form, password_field);
-                isNotValid(e_input_form, e_span_form, user_field);
+                //------check fields are not Valid
+                if(e_span_form.title === email_field.type && !email_field.isSuccess) isNotValid(e_input_form, e_span_form, email_field);
+                if(e_span_form.title === password_field.type && !password_field.isSuccess) isNotValid(e_input_form, e_span_form, password_field);
+                if(e_span_form.title === user_field.type && !user_field.isSuccess) isNotValid(e_input_form, e_span_form, user_field);
             })
             e.preventDefault();
          }
+      
     })
-    
 }
 
 Valid('main','.form_input','.form_submit');
+
+
+
 
 
 

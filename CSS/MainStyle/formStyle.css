@@ -62,10 +62,12 @@ footer a:hover{
     color:  rgb(255, 47, 47);
 }
 .form_input{
+    height: 80px;
+    margin-bottom: 7px;
     display: flex;
     flex-direction: column;
-    height: 80px;
     justify-content: space-around;
+    position: relative;
     box-sizing: border-box;
 }
 
@@ -89,23 +91,30 @@ footer a:hover{
 .form_input span{
     color: #333;
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 100;
     font-family:  sans-serif;
+    position: absolute;
+    bottom: -10px;
 }
 
 .form_submit{
     display: flex;
     justify-content: center;
+    margin: 15px 0;
 }
 
 
 .form_submit input{
-    padding: 5px 8px;
-    border-radius: 15px;
-    border: 1px solid;
+    background-color: var(--logoColor);
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 8px;
 }
 
-
+.form_submit input:active{
+    opacity: 0.7;
+}
 
 .isValid{
     color: var(--logoColor);
@@ -117,7 +126,7 @@ footer a:hover{
 }
 
 .border--green{
-    border: 2px solid  rgb(0, 254, 68);
+    border: 2px solid  #00fe44;
 
 }
 
