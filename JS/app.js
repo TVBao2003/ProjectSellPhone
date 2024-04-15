@@ -1,19 +1,13 @@
-
 /*--------design item produces--------------- */
 var elementsProduceAct = document.querySelectorAll(".produce_activity");
 var listDataProductsAddCart = [];
-
 
 
 elementsProduceAct.forEach((e, index)=>{
     let heartBlock = e.querySelector(".heart_item");
     let iconHeart = heartBlock.querySelector("i");
     let isLiked = false;
-    let buttonSaveElement = e.querySelector(".button_save");
-    buttonSaveElement.innerHTML = "<i class='bx bx-cart-alt'></i>";
-    let informationProduct = e.previousElementSibling;
     
-
     //----> change color of block of heart
     heartBlock.onclick = function(){
         if(!isLiked)
@@ -32,6 +26,10 @@ elementsProduceAct.forEach((e, index)=>{
 
     //---> change the cart icon to the check icon
     let dataProduct = {};
+    let informationProduct = e.previousElementSibling;
+    let buttonSaveElement = e.querySelector(".button_save");
+    buttonSaveElement.innerHTML = "<i class='bx bx-cart-alt'></i>";
+
     buttonSaveElement.onclick = ()=>{
         let nameProduct = informationProduct.querySelector('.produce_name').textContent;
         let priceProduct = informationProduct.querySelector('.produce_price').textContent;
@@ -305,7 +303,7 @@ listItems.forEach((item, index)=>{
         let btnClose = elementCartModal.querySelector(".button--close");
         let bodyCartModal = elementCartModal.querySelector('.modal_cart--body');
         
-        //-------click to Close------e
+        //-------click to Close------
         iconClose.onclick = () =>{
             closeModal(isOpen, item, elementCartModal, aElement);
         }
@@ -321,14 +319,16 @@ listItems.forEach((item, index)=>{
         //-------Click to Open------------
         item.onclick = ()=>{
             openModal(isOpen, item, elementCartModal, aElement);
-             //-----------update new data---------- 
+             //-----------update new data of cart---------- 
             if(listDataProductsAddCart.length === 0 && listProductsExist.size === 0 ) 
                 alert("There is no any products");           
             else
             {
+                // upload data on the cart when click
                 const indexFirstElement = 0;
                 while(indexFirstElement < listDataProductsAddCart.length)
-                {                       
+                {     
+                    //check is the first product of listDataProductsAddCart in arrayName ?            
                     if(arrayName.includes(listDataProductsAddCart[indexFirstElement].Name))
                     {
                         listDataProductsAddCart.shift();
@@ -341,15 +341,16 @@ listItems.forEach((item, index)=>{
                     let dataPrice = listDataProductsAddCart[indexFirstElement].Price;
                     let dataImg = listDataProductsAddCart[indexFirstElement].Image;
 
+                    //add product to Map and array save name and add to modal cart
                     listProductsExist.set(dataName, dataId);
-
                     arrayName.push(dataName);
-                    
                     addDataToModal(bodyCartModal, dataName, dataPrice, dataImg);
 
+                    //delete product out of listDataProductsAddCart
                     listDataProductsAddCart.shift();
                 }
-            }           
+            }     
+
             //---------delete Products saved out cart---------------
             var deleteProductsSaved = document.querySelectorAll('.dataProducts_button--pop');
             deleteProductsSaved.forEach((element)=>{
@@ -377,7 +378,7 @@ listItems.forEach((item, index)=>{
 //--------------------Modal Menu responsive-------------------
 var responsiveMenu = document.querySelector(".responsive_nav_menu");
 var modalMenu = document.querySelector("#nav_menu");
-
+var bannerHead = document.querySelector("#bannerHead");
 responsiveMenu.innerHTML = "<i class='bx bx-menu'></i>";
 
 responsiveMenu.onclick = ()=>{
@@ -392,5 +393,7 @@ responsiveMenu.onclick = ()=>{
         responsiveMenu.innerHTML = "<i class='bx bx-x'></i>";
     }  
 }
+
+
 
 
