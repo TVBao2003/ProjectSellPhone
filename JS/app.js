@@ -95,12 +95,13 @@ listItems.forEach((item, index)=>{
             //-------search items--------
             if(valueInputSearch.length != 0){
                 listProducts.forEach((e)=>{
-                    if(e.Name.includes(valueInputSearch, 0))
+                    if(e.name.includes(valueInputSearch, 0))
                     {                             
-                        let Name = e.Name;
-                        let Img = e.Image;
-                        let Price = e.Price;
-                        addDataToModal(bodySearchModal, Name, Price, Img);
+                        let Name = e.name;
+                        let Img = e.img;
+                        let Price = e.price;
+                        let Id = e.id;
+                        addDataToModal(bodySearchModal, Id, Name, Price, Img);
                         inputSearchElement.value = "";
                     }
                 })
