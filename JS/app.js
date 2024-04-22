@@ -92,7 +92,7 @@ listItems.forEach((item, index)=>{
 
 
             let valueInputSearch = inputSearchElement.value;
-            //-------search items--------
+            //-------Search items--------
             if(valueInputSearch.length != 0){
                 listProducts.forEach((e)=>{
                     if(e.name.includes(valueInputSearch, 0))
