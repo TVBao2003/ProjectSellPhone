@@ -100,7 +100,7 @@ listItems.forEach((item, index)=>{
                         let Name = e.name;
                         let Img = e.img;
                         let Price = e.price;
-                        let Id = e.id;
+                        let Id = e.id
                         addDataToModal(bodySearchModal, Id, Name, Price, Img);
                         inputSearchElement.value = "";
                     }
