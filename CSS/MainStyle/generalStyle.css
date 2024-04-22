@@ -35,7 +35,7 @@
     background-color: white;
     border-radius: 20px;
 }
-
+/* ====== Close and Open Model */
 .field_close 
 {
     display: none;
@@ -45,19 +45,20 @@
 {
     display: flex;
 }
-
+/*==================================*/
 .dataProducts-SpaceBetween 
 {
     display: flex;
     justify-content: space-between;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 .dataProducts_style 
 {
     width: 100%;
-    border-top: 1px solid var(--clickChange);
-    border-bottom: 1px solid var(--clickChange);
+    /* border-top: 1px solid var(--clickChange);
+    border-bottom: 1px solid var(--clickChange); */
+   
     padding: 5px;
     transition: 0.8s ease;
 }
@@ -75,7 +76,7 @@
     cursor: pointer;
     color: var(--clickChange);
     display: none;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 .dataProducts_button--buy 
@@ -91,7 +92,7 @@
     cursor: pointer;
     color: var(--clickChange);
     display: none;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 .dataProducts_button--buy a i 
@@ -117,6 +118,7 @@
     margin-top: 10px;
     cursor: pointer;
     transition: 0.1s ease;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67, 0.1), 0px 2px 6px 2px rgba(60,64, 67, 0.2);
 
 }
 
@@ -140,6 +142,7 @@
 {
     background-color: var(--hoverColor);
     justify-content: space-between;
+
 }
 
 .dataProducts_contain:hover .dataProducts_button--pop 
@@ -154,12 +157,13 @@
 
 .dataProducts_contain:hover .dataProducts_style 
 {
-    width: 450px;
+    width: 550px;
     background-color: var(--hoverColor);
     color: white;
     border-color: var(--logoColor);
     cursor: pointer;
 }
+
 @keyframes displayModal {
     0%{
         top: -1000px;

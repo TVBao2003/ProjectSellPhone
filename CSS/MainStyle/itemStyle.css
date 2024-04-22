@@ -17,15 +17,29 @@
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+.id_product{
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-color: var(--logoColor);
+    color: white;
+    padding: 6px 8px;
+    border-radius: 3px;
+    border-top-left-radius: 20px;
+    border: 2px solid var(--logoColor);
+    box-shadow: 0px 0px 10px 5px rgba(51, 43, 43, 0.2);
+    z-index: 2;
+}
 .produce_item 
 {
+    position: relative;
     width: 200px;
     height: 300px;
     background-color: white;
     margin: 10px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 5px rgba(51, 43, 43, 0.2);
+    border: 2px solid #ffffff00;
     box-sizing: border-box;
 }
 
@@ -34,7 +48,11 @@
     border: 2px solid var(--hoverColor);
     transition-delay: 0.2s;
 }
-
+.produce_item:hover .id_product 
+{
+    box-shadow: 0px 0px 10px 5px rgba(255, 0, 0, 0.296);
+    transition-delay: 0.2s;
+}
 #list_produce 
 {
     display: flex;
@@ -43,7 +61,7 @@
     justify-content: space-around;
 }
 
-.produce_img img 
+.produce_img>img 
 {
     object-fit: contain;
     width: 60%;
@@ -53,15 +71,25 @@
 
 .produce_img 
 {
+    width: 180px;
+    height: 130px;
     text-align: center;
 }
 
 .produce_info_container 
 {
     padding: 10px;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+.produce_info{
+    flex: 4;
+    position: relative;
 
 }
-
 .produce_name 
 {
     margin-top: 10px;
@@ -73,15 +101,19 @@
 {
     color: var(--logoColor);
     text-align: center;
-    margin-top: 10px;
+  
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
 }
 
 .produce_activity 
 {
-    margin: 25px 0;
     display: flex;
-    justify-content: space-around;
+    flex: 1;
+    gap: 16px;
+  
 }
 
 .button_buy button 
@@ -99,7 +131,6 @@
 {
     color: white;
     background-color: var(--logoColor);
-    transform: scale(0.8);
     transition: 0.1s;
 }
 /* .button_save{

@@ -1,69 +1,71 @@
-function clickClose(e){
-    isOpen = false;
-    e.classList.add('field_close');
-}
-
-function clickOpen(e){
-    isOpen = true;
-    e.classList.add('field_open');
-}
-
-function clickOffClose(e){
-    isOpen = true;
-    e.classList.remove('field_close');
-}
-
-function clickOffOpen(e){
-    isOpen = false;
-    e.classList.remove('field_open');
-}
-
-function changeClose(element, linkElement){
-    linkElement.style.color = "white";
-    element.classList.remove('change_click-item');
-}
-
-function changeOpen(element, linkElement){
-    linkElement.style.color = primaryColor;
-    element.classList.add('change_click-item');
-}
 
 //----Primary methods-------
 
-function openModal(check, element, modalElement, linkElement){
-    if(!check)
-    {
-        clickOffClose(modalElement);             
-        clickOpen(modalElement);
-        changeOpen(element, linkElement);
-    }
+export function openModal(element, modalElement, linkElement){
+    modalElement.classList.add('field_open');
+    modalElement.classList.remove('field_close')
+    element.classList.add('change_click-item');
+    linkElement.style.color = "#DF052B";
 }
 
-function closeModal(check, element, modalElement, linkElement){
-    if(check)
-    {
-        clickOffOpen(modalElement);
-        clickClose(modalElement);
-        changeClose(element, linkElement);
-    }
+export function closeModal( element, modalElement, linkElement){
+    modalElement.classList.remove('field_open');
+    modalElement.classList.add('field_close');
+    element.classList.remove('change_click-item');
+    linkElement.style.color = "white";
 }
+export const renderData = (listData, container)=>{
+    let htmlItems = "";
 
-function addDataToModal(bodyModal, dataName, dataPrice, dataImg){
+    listData.map((data)=>{
+        htmlItems += `<div class="produce_item">
+                            <span class="id_product">${data.id}</span>
+                            <div class="produce_info_container">
+                                <div class="produce_info">
+                                    <div class="produce_img">
+                                        <img src=${data.img} alt="">
+                                    </div>
+                                    <p class="produce_name">${data.name}</p>
+                                    <p class="produce_price">${data.price} đ</p>
+                                </div>
+                                <div class="produce_activity">
+                                    <div class="button_buy">
+                                        <a href="#"><button type="button">Buy Now</button></a>
+                                    </div>
+
+                                    <div class="button_save"></div>
+
+                                    <div id="dd" class="heart_item">
+                                        <i class='bx bxs-heart' ></i>Like
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+        })
+
+    container.innerHTML = htmlItems;
+}
+export function addDataToModal(bodyModal, dataId, dataName, dataPrice, dataImg){
     var containProductSaved = document.createElement('div');
     var containButtonsBuyOrDelete = document.createElement("div");
     var informationProductSaved = document.createElement('div');
+    var containerImgID = document.createElement('div');
     //-----design CSS div tag------
     containProductSaved.classList.add('dataProducts_contain');
     informationProductSaved.classList.add('dataProducts-SpaceBetween');
     informationProductSaved.classList.add('dataProducts_style');
     containButtonsBuyOrDelete.classList.add('dataProducts-SpaceBetween');
+    containerImgID.classList.add('dataProducts-SpaceBetween');
     //------create span tag-------
     var spanElementName = document.createElement('span');
     var spanElementPrice = document.createElement('span');
-                
+    var spanElementId = document.createElement('span');
     //------add content and design CSS----------
+    spanElementId.innerHTML = dataId;
     spanElementName.innerText = dataName;
     spanElementPrice.innerText = dataPrice;
+    spanElementId.style.marginTop = '5px';
+    spanElementId.style.marginRight = '5px';
     spanElementName.style.marginTop = '5px';
     spanElementPrice.style.marginTop = '5px';
 
@@ -88,8 +90,10 @@ function addDataToModal(bodyModal, dataName, dataPrice, dataImg){
                              `;
     btnPopProduct.innerHTML = "<i class='bx bx-x'></i>";
 
+    containerImgID.appendChild(spanElementId);
+    containerImgID.appendChild(imageElement)
     //-----add span and image elements in div tag-------
-    informationProductSaved.appendChild(imageElement);
+    informationProductSaved.appendChild(containerImgID);
     informationProductSaved.appendChild(spanElementName);
     informationProductSaved.appendChild(spanElementPrice);
 
