@@ -63,7 +63,6 @@ var isOpen = false;
 
 listItems.forEach((item, index)=>{
     //------methods change modal------------
-    console.log(item)
 //------Primary Part--------------------
     //----index = 0 => Modal Search:
     //----index = 1 => Modal Menu:
@@ -357,7 +356,7 @@ listItems.forEach((item, index)=>{
                 openModal(item, elementCartModal, linkElementCart);
             }
              //-----------update new data of cart---------- 
-            if(listDataProductsAddCart.length === 0 && /*listProductsExist.size === 0*/ listCart.length === 0 ) 
+            if(listDataProductsAddCart.length === 0 &&  listCart.length === 0 ) 
                 alert("There is no any products");           
             else
             {
@@ -366,7 +365,7 @@ listItems.forEach((item, index)=>{
                 while(indexFirstElement < listDataProductsAddCart.length)
                 {     
                     //check is the first product of listDataProductsAddCart in arrayName ?            
-                    if(listCart.includes(listDataProductsAddCart[indexFirstElement].id))
+                    if(listCart.includes(listDataProductsAddCart[indexFirstElement].Id))
                     {
                         listDataProductsAddCart.shift();
                         continue;
@@ -386,6 +385,7 @@ listItems.forEach((item, index)=>{
 
                     //delete product out of listDataProductsAddCart
                     listDataProductsAddCart.shift();
+                    console.log(listCart)
                 }
             }     
 
@@ -395,10 +395,10 @@ listItems.forEach((item, index)=>{
                element.onclick = ()=>{             
                     let productID = element.parentElement.previousElementSibling.firstChild.firstChild.textContent;
                     let indexOfProduct = listProducts.findIndex((e)=>e.id === productID);
-             
+                    let indexOfCart = listCart.findIndex((e)=>e === productID);
                     //------change check icon to cart icon
                     elementsProduceAct[indexOfProduct].querySelector(".button_save").innerHTML = "<i class='bx bx-cart-alt'></i>";
-        
+                    listCart.splice(indexOfCart, 1);
                     //--------pop product out cart
                     bodyCartModal.removeChild(element.parentElement.parentElement);
                    //-------design nav css style. 
