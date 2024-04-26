@@ -24,7 +24,7 @@
     font-family: monospace;
     width: 711px;
     position: absolute;
-    bottom: 30%;
+    bottom: 10%;
     right: 0;
 }
 
@@ -47,24 +47,60 @@
     background-color: var(--logoColor);
 
 }
+.list_menu--account{
+    width: 180px;
+    display: none;
+    position: absolute;
+    left: -70px;
+    top: 40px;
+    list-style: none;
+    padding: 0;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67, 0.1), 0px 2px 6px 2px rgba(60,64, 67, 0.2);
+}
 
+.item_menu--account:hover{
+   background-color: #4444443f;
+}
+.item_account{
+    display: flex;
+    align-items: center;
+ 
+}
+.iconAccount{
+    margin:0 4px;
+}
+.item_account>i{
+    font-size: 25px;
+    margin-right: 4px;
+}
+.link_menu--account{
+    color: var(--logoColor);
+    text-decoration: none;
+    display: flex;
+    padding: 8px 12px;
+}
+
+.list-items:hover .list_menu--account{
+    display: block;
+}
 .list-items:hover 
 {
     background-color: var(--hoverColor);
 
 }
 
-.list-items a i 
+.list-items>a>i 
 {
     font-size: 25px;
     position: relative;
 }
 
-.list-items a 
+.list-items>a 
 {
     color: white;
     text-decoration: none;
-    width: 85px;
+    width: 90px;
     display: flex;
     justify-content: space-around;
     align-items: center;

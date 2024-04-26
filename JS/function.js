@@ -1,11 +1,10 @@
-
+import {primaryColor} from './root.js'
 //----Primary methods-------
-
 export function openModal(element, modalElement, linkElement){
     modalElement.classList.add('field_open');
     modalElement.classList.remove('field_close')
     element.classList.add('change_click-item');
-    linkElement.style.color = "#DF052B";
+    linkElement.style.color = primaryColor;
 }
 
 export function closeModal( element, modalElement, linkElement){
@@ -16,7 +15,6 @@ export function closeModal( element, modalElement, linkElement){
 }
 export const renderData = (listData, container)=>{
     let htmlItems = "";
-
     listData.map((data)=>{
         htmlItems += `<div class="produce_item">
                             <span class="id_product">${data.id}</span>

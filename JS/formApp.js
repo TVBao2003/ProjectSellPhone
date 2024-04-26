@@ -1,16 +1,16 @@
 import { UserField, EmailField, PasswordField, ConfirmPasswordField, Users } from "./objects.js";
-import { DATA_USERS } from "./dataUser.js";
+import { DATA_USERS, ACCOUNT_SIGNIN, DATA_USERS_ORTHER } from "./Data/dataUser.js";
 
-var DATA_USERS_ORTHER = "data-users-orther";
+
 var dataUserOrther;
-
+localStorage.setItem(ACCOUNT_SIGNIN, '[]');
+var accountSignIn = JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN));
 //------------ Handle DATA -----------------
 if(JSON.parse(localStorage.getItem(DATA_USERS_ORTHER)))
 {
     if(JSON.parse(localStorage.getItem(DATA_USERS_ORTHER)).length != 0)
         dataUserOrther = JSON.parse(localStorage.getItem(DATA_USERS_ORTHER));
     else dataUserOrther = JSON.parse(localStorage.getItem(DATA_USERS));
-
 }else{
     localStorage.setItem(DATA_USERS_ORTHER, '[]');
     dataUserOrther = JSON.parse(localStorage.getItem(DATA_USERS));
@@ -186,19 +186,24 @@ function Valid(mainElement, classListInput, submitElement)
                             isNotValid(e_input_form, e_span_form, password_field);   
                     })
                     e.preventDefault();
+                }else{
+                    dataUserOrther = JSON.parse(localStorage.getItem(DATA_USERS_ORTHER));
+
+                    user = dataUserOrther.find((data)=>data.email === user.email);
+                    accountSignIn.push(user);
+                    console.log(accountSignIn);
+                    localStorage.setItem(ACCOUNT_SIGNIN, JSON.stringify(accountSignIn));
                 }
             }else{
                 dataUserOrther.push(user);
                 localStorage.setItem(DATA_USERS_ORTHER,JSON.stringify(dataUserOrther));
-              
-               
             } // ---- if this is a form sign up, we will push dataUserOrther array
          }else{
             //------Loop input blocks
             containInputs.forEach(containInput=>{
                 let e_input_form = containInput.querySelector('input');
                 let e_span_form = containInput.querySelector('span');
-                //------check fields are not Valid
+                //------check fields are not Valid------------
                 if(e_span_form.title === email_field.type && !email_field.isSuccess) isNotValid(e_input_form, e_span_form, email_field);
                 if(e_span_form.title === password_field.type && !password_field.isSuccess) isNotValid(e_input_form, e_span_form, password_field);
                 if(e_span_form.title === user_field.type && !user_field.isSuccess) isNotValid(e_input_form, e_span_form, user_field);

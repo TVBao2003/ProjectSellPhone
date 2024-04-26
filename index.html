@@ -44,7 +44,7 @@
                         </li>
                         <li class="list-items">
                             <a class="w60"  href="#">
-                                <i class='bx bx-phone-call'></i><b> Call</b>
+                                <i class='bx bx-phone-call'></i><b> Contract</b>
                             </a>
                         </li>
                         <li class="list-items">
@@ -53,9 +53,19 @@
                             </a>
                         </li>
                         <li class="list-items">
-                            <a href="./HTML/formSignIn.html">
+                            <span class="item_account">
                                 <i class='bx bx-user-circle'></i><b> Sign in</b>
-                            </a>
+                            </span>
+                            <ul class="list_menu--account">
+                                <li class="item_menu--account itemAccount">
+                                    <a class="link_menu--account" href="./HTML/formSignIn.html"><i class='bx bx-log-out iconAccount'></i><p>Sign Out</p></a>
+                                </li>
+                                <hr>
+                                <li class="item_menu--account">
+                                    <a class="link_menu--account" href="./HTML/userPage.html"><i class='bx bx-user iconAccount' ></i> Profile</a>
+                                </li>
+                                
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -141,7 +151,7 @@
                 <div class="modal_call">
                     <div class="modal_button--call">
                         <div class="modal_call--header">
-                            <p>Welcome Call</p>
+                            <p>Contract</p>
                             <i class='bx bx-x icon_close'></i>
                         </div>
                         <div class="modal_call--body">
@@ -214,7 +224,5 @@
         </main>
         <footer></footer>
     </body>
-    <script src="./JS/root.js"></script>
     <script type="module" src="./JS/app.js"> </script>
-    <script src="./JS/test.js"></script>
 </html>
