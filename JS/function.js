@@ -53,6 +53,7 @@ export function addDataToModal(bodyModal, dataId, dataName, dataPrice, dataImg){
     informationProductSaved.classList.add('dataProducts-SpaceBetween');
     informationProductSaved.classList.add('dataProducts_style');
     containButtonsBuyOrDelete.classList.add('dataProducts-SpaceBetween');
+    containButtonsBuyOrDelete.classList.add('block_btn');
     containerImgID.classList.add('dataProducts-SpaceBetween');
     //------create span tag-------
     var spanElementName = document.createElement('span');
@@ -77,7 +78,8 @@ export function addDataToModal(bodyModal, dataId, dataName, dataPrice, dataImg){
 
     var btnPopProduct= document.createElement('button');
     var btnBuyProduct= document.createElement('button');
-
+    btnPopProduct.classList.add("dataProducts_btn");
+    btnBuyProduct.classList.add("dataProducts_btn");
     btnPopProduct.classList.add("dataProducts_button--pop");
     btnBuyProduct.classList.add("dataProducts_button--buy");
              

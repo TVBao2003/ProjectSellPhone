@@ -46,11 +46,22 @@
     display: flex;
 }
 /*==================================*/
+.dataProducts_contain 
+{
+    display: flex;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67, 0.1), 0px 2px 6px 2px rgba(60,64, 67, 0.2);
+    position: relative;
+    transition-delay: 0.3s;
+    overflow: hidden;
+}
+
 .dataProducts-SpaceBetween 
 {
     display: flex;
     justify-content: space-between;
-    transition: all 0.1s ease;
 }
 
 .dataProducts_style 
@@ -60,41 +71,33 @@
     border-bottom: 1px solid var(--clickChange); */
    
     padding: 5px;
-    transition: 0.8s ease;
+    transition: all 0.5s ease;
+    transition-delay: 0.3s;
 }
 
-
-.dataProducts_button--pop 
-{
+.block_btn{
+    position: relative;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: -800px;
+    transition-delay: 0.3s;
+}
+.dataProducts_btn{
     width: 30px;
     height: 30px;
     border: 3px solid var(--clickChange);
     outline: none;
     background-color: white;
     border-radius: 5px;
-    margin: 5px 5px 0 5px;
+    margin: 5px 10px 0 5px;
     cursor: pointer;
     color: var(--clickChange);
-    display: none;
-    transition: all 0.1s ease;
+    display: block;
 }
-
-.dataProducts_button--buy 
-{
-    width: 30px;
-    height: 30px;
-    border: 3px solid var(--clickChange);
-    outline: none;
-    background-color: white;
-    border-radius: 5px;
-    margin-left: 5px;
-    margin-top: 5px;
-    cursor: pointer;
-    color: var(--clickChange);
-    display: none;
-    transition: all 0.1s ease;
+.dataProducts_button--buy {
+    margin-right: 6px;
 }
-
 .dataProducts_button--buy a i 
 {
     color: var(--clickChange);
@@ -111,17 +114,13 @@
     right: 9px;
     top: -3px;
 }
+.dataProducts_contain:hover .block_btn{
 
-.dataProducts_contain 
-{
-    display: flex;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: 0.1s ease;
-    box-shadow: 0 1px 2px 0 rgba(60,64,67, 0.1), 0px 2px 6px 2px rgba(60,64, 67, 0.2);
-
+    animation-name: btnMove;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+    right: 0;
 }
-
 
 .dataProducts_button--buy:hover 
 {
@@ -142,28 +141,38 @@
 {
     background-color: var(--hoverColor);
     justify-content: space-between;
-
 }
 
-.dataProducts_contain:hover .dataProducts_button--pop 
+/* .dataProducts_contain:hover .dataProducts_button--pop 
 {
     display: block;
+    transition-delay: 0.5s;
 }
 
 .dataProducts_contain:hover .dataProducts_button--buy 
 {
     display: block;
-}
+    transition-delay: 0.5s;
+} */
 
 .dataProducts_contain:hover .dataProducts_style 
 {
     width: 550px;
-    background-color: var(--hoverColor);
     color: white;
     border-color: var(--logoColor);
     cursor: pointer;
+    transition-delay: 0.3s;
 }
 
+
+@keyframes btnMove{
+    0%{
+        right: -900px;
+    }
+    100%{
+        right: 0;
+    }
+}
 @keyframes displayModal {
     0%{
         top: -1000px;

@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <form action="formSignIn.html" class="form_sign form_up">
+    <form method="post" action="http://localhost:8000/user" class="form_sign form_up">
         <div class="form_contain--main" >
             <header>
                 <span>Sign Up</span>
@@ -17,17 +17,17 @@
             <main class="main_form--up">
                 <div class="form_input">
                     <label for="#input_email">Email Address</label>
-                    <input id="input_email" placeholder="Enter Name" type="email">
+                    <input id="input_email" name="email" placeholder="Enter Name" type="email">
                     <span title="email"></span>
                 </div>
                 <div class="form_input">
                     <label for="">User Name</label>
-                    <input placeholder="Enter Password" type="text">
+                    <input placeholder="Enter Password" name="name" type="text">
                     <span title="userName"></span>
                 </div>
                 <div class="form_input">
                     <label for="">Password</label>
-                    <input placeholder="Enter Password" type="password">
+                    <input name="password" placeholder="Enter Password" type="password">
                     <span title="password"></span>
                 </div>
                 <div class="form_input">
@@ -36,7 +36,7 @@
                     <span title="confirmPassword"></span>
                 </div>
                 <div  class="form_submit">
-                    <input  type="submit">
+                    <input type="submit">
                 </div>
             </main>
             <footer>

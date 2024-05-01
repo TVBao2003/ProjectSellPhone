@@ -13,11 +13,13 @@ handleDataSignIn();
 
 //----- Render Items to User-----------
 var containerListProduct = document.getElementById("list_produce");
-renderData(products, containerListProduct);
+
+renderData(products, containerListProduct)
+var listDataProductsAddCart = [];
+
+handleAddDataCart(listDataProductsAddCart);
 
 //--------- handle buttons in item --------
-var listDataProductsAddCart = [];
-handleAddDataCart(listDataProductsAddCart);
 
 //--------- Handle buttons On Navbar ---------
 var listItems = document.querySelectorAll('.list-items');
