@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const Product = require('./models/Product');
 const User = require('./models/User');
-const UserSignIn = require('./models/UserSignIn');
 const database = require('./config/database');
 database.connect();
 

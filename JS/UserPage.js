@@ -20,6 +20,7 @@ var btnUpdate = document.querySelector(".btn_update");
 var btnSave = document.querySelector(".btn_save");
 var btnBack = document.querySelector(".btn_back");
 var btnAccept = document.querySelector(".btn_accept");
+var rows = document.querySelectorAll(".row");
 if(data.length !== 0) {
     //Event btn Update
     btnUpdate.onclick = ()=>{
@@ -27,6 +28,7 @@ if(data.length !== 0) {
             inputField.readOnly= false;
             inputField.classList.add("update_input")
         });
+        rows.forEach(row=>row.classList.add("row-flex"))
         btnSave.style.display = 'inline';
         btnUpdate.style.display = 'none';
         btnBack.style.display = 'none';
@@ -36,7 +38,7 @@ if(data.length !== 0) {
     //Event btn Save
     btnSave.onclick = ()=>{
         let user = [{
-            _id:listInputFields[0].value,
+            _id: listInputFields[0].value,
             idOfUser: listInputFields[1].value,
             email: listInputFields[2].value,
             name: listInputFields[3].value,
@@ -51,6 +53,7 @@ if(data.length !== 0) {
             inputField.classList.remove('update_input');
             
         });
+        rows.forEach(row=>row.classList.remove("row-flex"))
         btnSave.style.display = 'none';
         btnUpdate.style.display = 'none';
         btnBack.style.display = 'none';  
