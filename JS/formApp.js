@@ -5,14 +5,14 @@ localStorage.setItem(ACCOUNT_SIGNIN, '[]');
 var accountSignIn = JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN));
 //------------ Handle DATA -----------------
 var formSignIn = false;
-
+console.log(DATA_USERS)
 //------ Method check user is valid
 function isValidUser(user, dataUser)
 {
     let emailExist = false;
     let passwordExist = true;
     for(let i=0; i<dataUser.length; i++)
-    {
+    { 
         if(dataUser[i].email === user.email)
         {
             emailExist = true;
@@ -166,12 +166,12 @@ function Valid(mainElement, classListInput, submitElement)
                         let e_span_form = containInput.querySelector('span');
 
                         //---- the fields are not valid, it will notification error
-                        if(!isValidUser(user, dataUserOrther).emailFault 
+                        if(!isValidUser(user, DATA_USERS).emailFault 
                             && e_span_form.title === email_field.type)
                         {
                             isNotValid(e_input_form, e_span_form, email_field);
                         }
-                        if(!isValidUser(user, dataUserOrther).passwordFault 
+                        if(!isValidUser(user, DATA_USERS).passwordFault 
                             && e_span_form.title === password_field.type)
                         {
                             isNotValid(e_input_form, e_span_form, password_field);   
@@ -184,8 +184,10 @@ function Valid(mainElement, classListInput, submitElement)
                     user = DATA_USERS.find((data)=>data.email === user.email);
                     accountSignIn.push(user);
                     localStorage.setItem(ACCOUNT_SIGNIN, JSON.stringify(accountSignIn));
+             
                 }
             }// Data will add DataBase
+            
          }
          else
          {

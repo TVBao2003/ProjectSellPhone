@@ -41,6 +41,9 @@
     background-color: var(--logoColor);
     border-radius: 4px;
     font-weight: 600;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
 }
 .btn_back{
     margin-right: 50px;
@@ -51,7 +54,9 @@
     display: none;
 }
 
-
+.btn_accept{
+    display: none;
+}
 .update_input{
     border-bottom: 1px solid var(--logoColor);
     border-right: 1px solid var(--logoColor);

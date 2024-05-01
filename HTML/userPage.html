@@ -12,35 +12,42 @@
     <title>User</title>
 </head>
 <body>
-    <div class="container">
-        <h1 style="text-align: center; color: var(--logoColor)">ACCOUNT INFOMATION</h1>
-        <div class="block_fields">
-            <div class="row">
-                <label><i class='bx bx-user iconInfor'></i>Id of user:</label>
-                <input value='Undefined' class="block_display id_user_field "/>
-            </div>
-            <div class="row">
-                <label><i class='bx bx-envelope iconInfor'></i>Email:</label>
-                <input value="Undefined" class="block_display email_field"/>
+    <form action="http://localhost:8000/user/update" method="POST">
+        <div class="container">
+            <h1 style="text-align: center; color: var(--logoColor)">ACCOUNT INFOMATION</h1>
+            <div class="block_fields">
+                <div class="row">
+                    <label><i class='bx bx-user iconInfor'></i>Id of user:</label>
+                    <input name="_id" value='Undefined' class="block_display id_user_field "/>
+                </div>
+                <div class="row">
+                    <label><i class='bx bx-user iconInfor'></i>CCCD:</label>
+                    <input name="idOfUser" value='Undefined' class="block_display id_user_field "/>
+                </div>
+                <div class="row">
+                    <label><i class='bx bx-envelope iconInfor'></i>Email:</label>
+                    <input name="email" value="Undefined" class="block_display email_field"/>
+                </div>
+            
+                <div class="row">
+                    <label><i class='bx bx-purchase-tag-alt iconInfor'></i>Name:</label>
+                    <input name="name" value="Undefined" class="block_display name_field"/>
+                </div>
+    
+                <div class="row">
+                    <label><i class='bx bx-phone iconInfor' ></i>Number Phone:</label>
+                    <input name="phone"  value="Undefined" class="block_display phone_field"/>
+                </div>
             </div>
     
-            <div class="row">
-                <label><i class='bx bx-purchase-tag-alt iconInfor'></i>Name:</label>
-                <input value="Undefined" class="block_display name_field"/>
-            </div>
-
-            <div class="row">
-                <label><i class='bx bx-phone iconInfor' ></i>Number Phone:</label>
-                <input  value="Undefined" class="block_display phone_field"/>
+            <div class="block_btn">
+                <span class="btn_update btn">Update</span>
+                <span class="btn_save btn" >Save</span>
+                <button class="btn btn_accept">Accept</button>
+                <a href="../index.html" class="btn_back btn">Back</a>
             </div>
         </div>
-
-        <div class="block_btn">
-            <button class="btn_update btn">Update</button>
-            <button class="btn_save btn">Save</button>
-            <a href="../index.html" class="btn_back btn">Back</a>
-        </div>
-    </div>
+    </form>
     <script type="module" src="../JS/UserPage.js"></script>
 </body>
 </html>

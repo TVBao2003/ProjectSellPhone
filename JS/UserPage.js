@@ -5,10 +5,11 @@ var data = JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN));
 function renderData(){
     let data = JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN));
     if(data.length !== 0){
-        listInputFields[0].value = data[0].userId;
-        listInputFields[1].value = data[0].email;
-        listInputFields[2].value = data[0].name;
-        listInputFields[3].value = data[0].phone;
+        listInputFields[0].value = data[0]._id;
+        listInputFields[1].value = data[0].idOfUser;
+        listInputFields[2].value = data[0].email;
+        listInputFields[3].value = data[0].name;
+        listInputFields[4].value = data[0].phone;
     }
 }
 
@@ -18,6 +19,7 @@ listInputFields.forEach(inputField =>inputField.readOnly= true)
 var btnUpdate = document.querySelector(".btn_update");
 var btnSave = document.querySelector(".btn_save");
 var btnBack = document.querySelector(".btn_back");
+var btnAccept = document.querySelector(".btn_accept");
 if(data.length !== 0) {
     //Event btn Update
     btnUpdate.onclick = ()=>{
@@ -28,32 +30,33 @@ if(data.length !== 0) {
         btnSave.style.display = 'inline';
         btnUpdate.style.display = 'none';
         btnBack.style.display = 'none';
+        btnAccept.style.display = 'none';
         localStorage.setItem(ACCOUNT_SIGNIN,'[]');
     }
     //Event btn Save
     btnSave.onclick = ()=>{
         let user = [{
-            userId:listInputFields[0].value,
-            email: listInputFields[1].value,
-            name: listInputFields[2].value,
-            phone: listInputFields[3].value, 
+            _id:listInputFields[0].value,
+            idOfUser: listInputFields[1].value,
+            email: listInputFields[2].value,
+            name: listInputFields[3].value,
+            phone: listInputFields[4].value, 
         }];
        
         let indexOfData = DATA_USERS.findIndex((e)=>e.email === user[0].email);
         user[0].password = DATA_USERS[indexOfData].password;
-        DATA_USERS[indexOfData] = user[0];
-        console.log(DATA_USERS);
+        // user[0].password = DATA_USERS[indexOfData].password;
         listInputFields.forEach(inputField => {
             inputField.readOnly=true;
             inputField.classList.remove('update_input');
             
         });
         btnSave.style.display = 'none';
-        btnUpdate.style.display = 'inline';
-        btnBack.style.display = 'inline';
+        btnUpdate.style.display = 'none';
+        btnBack.style.display = 'none';  
+        btnAccept.style.display = 'inline';
         localStorage.setItem(ACCOUNT_SIGNIN,JSON.stringify(user));
-    
-        renderData();
+
     }
 }else{
     btnUpdate.style.display = 'none';
