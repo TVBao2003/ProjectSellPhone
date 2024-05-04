@@ -1,14 +1,13 @@
-import { addDataToModal } from "../function.js";
+import { addDataToModal } from "../Root/function.js";
 import { products } from "../Data/productData.js";
 const handleCartModal = (listDataProductsAddCart, listCart)=>{
     //---elements of modal cart----------
     let elementCartModal = document.querySelector(".modal_cart");
     let bodyCartModal = elementCartModal.querySelector('.modal_cart--body'); 
     let elementsProduceAct = document.querySelectorAll(".produce_activity");   
-
     if(listDataProductsAddCart.length === 0 &&  listCart.length === 0 ) 
-        alert("There is no any products");           
-    else
+    alert("There is no any products");           
+else
     {// upload data on the cart when click
         const indexFirstElement = 0;
         while(indexFirstElement < listDataProductsAddCart.length)
@@ -25,23 +24,23 @@ const handleCartModal = (listDataProductsAddCart, listCart)=>{
             let dataName = listDataProductsAddCart[indexFirstElement].Name;
             let dataPrice = listDataProductsAddCart[indexFirstElement].Price;
             let dataImg = listDataProductsAddCart[indexFirstElement].Image;
-
+            
             //add product to Map and array save name and add to modal cart
             // listProductsExist.set(dataName, dataId);
             listCart.push(dataId);
             // arrayName.push(dataName);
             addDataToModal(bodyCartModal, dataId, dataName, dataPrice, dataImg);
-
+            
             //delete product out of listDataProductsAddCart
             listDataProductsAddCart.shift();
-         
         }
     }     
-
+    
+ 
     //---------delete Products saved out cart---------------
     var deleteProductsSaved = bodyCartModal.querySelectorAll('.dataProducts_button--pop');
     deleteProductsSaved.forEach((element)=>{
-       element.onclick = ()=>{             
+        element.onclick = ()=>{             
             let productID = element.parentElement.previousElementSibling.firstChild.firstChild.textContent;
             let indexOfProduct = products.findIndex((e)=>e.id === productID);
             let indexOfCart = listCart.findIndex((e)=>e === productID);

@@ -16,6 +16,9 @@ body{
     height: 100%;
 }
 
+body::-webkit-scrollbar{
+    width: 1px;
+}
 main 
 {
     position: relative;

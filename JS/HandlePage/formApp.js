@@ -1,5 +1,5 @@
-import { UserField, EmailField, PasswordField, ConfirmPasswordField, Users } from "./objects.js";
-import { DATA_USERS, ACCOUNT_SIGNIN } from "./Data/dataUser.js";
+import { UserField, EmailField, PasswordField, ConfirmPasswordField, Users } from "../Root/objects.js";
+import { DATA_USERS, ACCOUNT_SIGNIN } from "../Data/dataUser.js";
 
 localStorage.setItem(ACCOUNT_SIGNIN, '[]');
 var accountSignIn = JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN));

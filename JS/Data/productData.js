@@ -79,5 +79,6 @@ async function getData(){
   .then(data => data)
   return data;
 }
+export const DATA_DETAILS_PRODUCT = 'data-details-product';
 
 export const products = await getData();

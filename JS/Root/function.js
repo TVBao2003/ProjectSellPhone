@@ -14,34 +14,32 @@ export function closeModal( element, modalElement, linkElement){
     linkElement.style.color = "white";
 }
 export const renderData = (listData, container)=>{
-    let htmlItems = "";
+    let html = "";
     listData.map((data)=>{
-        htmlItems += `<div class="produce_item">
-                            <span class="id_product">${data.id}</span>
-                            <div class="produce_info_container">
-                                <div class="produce_info">
-                                    <div class="produce_img">
-                                        <img src=${data.img} alt="">
-                                    </div>
-                                    <p class="produce_name">${data.name}</p>
-                                    <p class="produce_price">${data.price} đ</p>
-                                </div>
-                                <div class="produce_activity">
-                                    <div class="button_buy">
-                                        <a href="#"><button type="button">Buy Now</button></a>
-                                    </div>
-
-                                    <div class="button_save"></div>
-
-                                    <div id="dd" class="heart_item">
-                                        <i class='bx bxs-heart' ></i>Like
-                                    </div>
-                                </div>
+        html +=`<div class="produce_item">
+                    <span class="id_product">${data.id}</span>
+                    <div class="produce_info_container">
+                        <div class="produce_info">
+                            <div class="produce_img">
+                                <img src=${data.img} alt="">
                             </div>
-                        </div>`;
-        })
+                            <p class="produce_name">${data.name}</p>
+                            <p class="produce_price">${data.price} đ</p>
+                        </div>
+                        <div class="produce_activity">
+                            <div class="button_buy">
+                                <a class="link_page" href="${data.linkPage}"><button type="button">Buy Now</button></a>
+                            </div>
 
-    container.innerHTML = htmlItems;
+                            <div class="button_save"></div>
+
+                            <div id="dd" class="heart_item">
+                                <i class='bx bxs-heart' ></i>Like
+                            </div>
+                        </div>
+                    </div>
+                </div>`});
+    container.innerHTML = html ;
 }
 export function addDataToModal(bodyModal, dataId, dataName, dataPrice, dataImg){
     var containProductSaved = document.createElement('div');
@@ -59,7 +57,9 @@ export function addDataToModal(bodyModal, dataId, dataName, dataPrice, dataImg){
     var spanElementName = document.createElement('span');
     var spanElementPrice = document.createElement('span');
     var spanElementId = document.createElement('span');
+    
     //------add content and design CSS----------
+    spanElementId.classList.add("span_id");
     spanElementId.innerHTML = dataId;
     spanElementName.innerText = dataName;
     spanElementPrice.innerText = dataPrice;
@@ -84,7 +84,7 @@ export function addDataToModal(bodyModal, dataId, dataName, dataPrice, dataImg){
     btnBuyProduct.classList.add("dataProducts_button--buy");
              
     btnBuyProduct.innerHTML = `
-                                <a href="#">
+                                <a href="./HTML/detailsInformationProductPage.html" class="link_page" >
                                     <i class='bx bx-check'></i>
                                 </a>
                              `;

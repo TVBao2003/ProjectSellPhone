@@ -47,8 +47,6 @@
 .modal_menu--footer{
     height: 50px;
     width: 95%;
-    position: absolute;
-    bottom: 0;
     text-align: end;
 }
 
@@ -62,18 +60,22 @@
     flex-direction: column;
     justify-content: space-around;
 }
-
 .menu_type--item{
-    height: 40px;
     border-top: 1px solid rgb(159, 157, 157);
     border-bottom: 1px solid rgb(159, 157, 157);
     display: flex;
+}
+.menu_link--page{
+    width: 100%;
+    display: flex;
     justify-content: space-between;
+    padding: 8px ;
     align-items: center;
-    padding-left: 10px;
+    text-decoration: none;
+    color: black;
 }
 
-.menu_type--item:hover {
+.menu_link--page:hover {
     background-color: #dbdbdb;
     color: var(--logoColor);
 }
@@ -93,7 +95,7 @@
     padding-right: 5px;
 }
 
-/* ------------screen menu--------------- */
+/* ------------screen menu---------------
 .screen_menu{
     width: 800px;
     height: 500px;
@@ -124,4 +126,4 @@
 }
 .screen_menu--item a :hover{
     color: var(--logoColor);
-}
+} */

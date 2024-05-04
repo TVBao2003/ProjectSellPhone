@@ -1,4 +1,4 @@
-import { ACCOUNT_SIGNIN,DATA_USERS } from "./Data/dataUser.js";
+import { ACCOUNT_SIGNIN,DATA_USERS } from "../Data/dataUser.js";
 
 var listInputFields = document.querySelectorAll(".block_display");
 var data = JSON.parse(localStorage.getItem(ACCOUNT_SIGNIN));

@@ -1,12 +1,25 @@
-import { primaryColor, changeColor } from "../root.js";
-const handleAddDataCart = (listDataProductsAddCart)=>{
+import { primaryColor, changeColor } from "../Root/root.js";
+import { products, DATA_DETAILS_PRODUCT } from "../Data/productData.js";
+const handleButtonCard = (listDataProductsAddCart)=>{
     let elementsProduceAct = document.querySelectorAll(".produce_activity");
 
     elementsProduceAct.forEach(e =>{
         let heartBlock = e.querySelector(".heart_item");
         let iconHeart = heartBlock.querySelector("i");
         let isLiked = false;
-        
+        let btnBuy = e.querySelector(".link_page");
+        let productID = e.parentElement.previousElementSibling.textContent;
+        // Update DATA_DETAILS_PRODUCT
+        localStorage.setItem(DATA_DETAILS_PRODUCT, '[]');
+        var data =[{}];
+        btnBuy.onclick = ()=>{
+            let product = products.find((product)=>product.id === productID);
+            data[0].name = product.name;
+            data[0].price = product.price;
+            data[0].img = product.img;
+            localStorage.setItem(DATA_DETAILS_PRODUCT,JSON.stringify(data));
+           
+        }
         //----> change color of block of heart
         heartBlock.onclick = function(){
             if(!isLiked)
@@ -47,4 +60,4 @@ const handleAddDataCart = (listDataProductsAddCart)=>{
     })
 }
 
-export default handleAddDataCart;
+export default handleButtonCard;

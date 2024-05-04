@@ -1,11 +1,12 @@
-import { openModal, closeModal, renderData} from "./function.js";
+import { openModal, closeModal, renderData} from "./Root/function.js";
 import {products} from './Data/productData.js';
 import handleDataSignIn  from "./HandleModal/handleDataSignIn.js";
-import handleAddDataCart  from "./HandleModal/handleAddDataCart.js";
+import handleButtonCard  from "./HandleModal/handleButtonCard.js";
 import handleSearchModal from "./HandleModal/handleSearchModal.js";
 import handleMenuModal from "./HandleModal/handleMenuModal.js";
 import handleContractModal from "./HandleModal/handleContractModal.js";
 import handleCartModal from "./HandleModal/handleCartModal.js";
+import { handleCardInCard } from "./HandleModal/handleCardInCard.js";
 
 
 //------- Handle Sigin Account -------
@@ -17,7 +18,7 @@ var containerListProduct = document.getElementById("list_produce");
 renderData(products, containerListProduct)
 var listDataProductsAddCart = [];
 
-handleAddDataCart(listDataProductsAddCart);
+handleButtonCard(listDataProductsAddCart);
 
 //--------- handle buttons in item --------
 
@@ -162,6 +163,7 @@ if(index === 3)
             openModal(item, elementCartModal, linkElementCart);
         }
         handleCartModal(listDataProductsAddCart, listCart);
+        handleCardInCard();
     }
     
     //-------click to Close------

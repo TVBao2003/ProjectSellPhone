@@ -1,4 +1,4 @@
-import { addDataToModal } from "../function.js";
+import { addDataToModal } from "../Root/function.js";
 import { products } from "../Data/productData.js";
 const handleSearchModal = ()=>{
     //---------create variables---------
