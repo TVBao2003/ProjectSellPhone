@@ -1,7 +1,29 @@
+body{
+    background-color: var(--logoColor);
+}
 .container{
     width: 1200px;
     margin: 0 auto;
     box-shadow: 0 1px 2px 0 rgba(60,64,67, 0.1), 0px 2px 6px 2px rgba(60,64, 67, 0.2);
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: white;
+}
+.header{
+    padding: 10px 0;
+    padding-left: 10px;
+    background-color: white;
+}
+.header>a{
+    display: flex;
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+    font-weight: 600;
+    color: var(--logoColor);
+}
+.iconBack{
+    font-weight: 900;
 }
 .main{
     padding: 20px 50px;
@@ -9,16 +31,22 @@
 .item{
     margin-bottom: 12px;
 }
+.item>h2{
+    color: var(--logoColor);
+}
 .list{
     display: flex;
     align-items: center;
-    position: relative;
+    position: relative; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 325.6px;
 }
 .block_btn{
     background-color: rgba(236, 236, 236, 0.737);
     border-radius: 10px;
     width: 100px;
-    height: 325px;
+    height: 200px;
     position: absolute;
     z-index: 10;
     display: flex;
@@ -26,7 +54,7 @@
     justify-content: center;
 }
 .block_btn:active{
-    opacity: 0.9;
+    opacity: 0.7;
 }
 .block_btn--right{
     right: 0;
@@ -41,16 +69,7 @@
 }
 .block_display{
     display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    position: relative;
-}
-.block_display::-webkit-scrollbar{
-    width: 5px;
-    height: 6px;
-}
-.block_display::-webkit-scrollbar-thumb{
-    border-radius: 50px;
-    background-color: rgba(255, 0, 0, 0.663);
-    cursor: pointer;
+    position: absolute;
+    transition: all 1.6s;
+
 }
