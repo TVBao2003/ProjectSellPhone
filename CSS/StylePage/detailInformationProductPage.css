@@ -12,7 +12,7 @@
 .container>main{
     display: flex;
     justify-content: space-around;
-    padding: 80px 100px;
+    padding: 80px 50px;
 }
 
 .container>footer{
@@ -20,6 +20,7 @@
     height: 82px;
 }
 .block_image{
+    margin-right: 40px;
 }
 .block_details{
     display: flex;

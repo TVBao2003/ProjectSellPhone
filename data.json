@@ -17,7 +17,7 @@
     },
     {
       "id":"#20353",
-      "name":"SamSum Galaxy S22 Ultra (12GB - 256GB)",
+      "name":"SamSung Galaxy S22 Ultra (12GB - 256GB)",
       "img": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/s/m/sm-s908_galaxys22ultra_front_phantomblack_211119_2.jpg",
       "price": "18,590,000 " ,
       "exitInCart": false,
@@ -94,5 +94,310 @@
       "price": "27,090,000 " ,
       "exitInCart": false,
       "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20363",
+      "name":"Apple Macbook Air M2 2022 8GB 256GB",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook_air_m2_3_1.jpg",
+      "price": "24,690,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20364",
+      "name":"Macbook Air M3 13 inch 2024 8GB - 256GB",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/b/mba13-m3-midnight-gallery1-202402_5.jpg",
+      "price": "27,390,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20365",
+      "name":"Macbook Pro 14 M3 Pro 18GB - 512GB",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_macbook_pro_14_in_m3_pro_max_silver_pdp_image_position-1.jpg",
+      "price": "49,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20366",
+      "name":"MacBook Pro 16 inch M2 Pro 2023 (12 CPU - 19 GPU - 16GB - 512GB)",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook_pro_14_inch__41iqg8l6hsyi_large.jpg",
+      "price": "48,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20367",
+      "name":"Apple Macbook Air M2 2022 16GB 512GB",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook_air_m2_4_1_1_3.jpg",
+      "price": "34,690,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20368",
+      "name":"Macbook Pro 16 inch M1 Max 10 CPU - 32 GPU 32GB 1TB",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook-pro-2021-05_4_2.jpg",
+      "price": "52,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20369",
+      "name":"Apple MacBook Pro 13 M2 2022 8GB 512GB",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/_/t_i_xu_ng_4_3_1.png",
+      "price": "33,690,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20370",
+      "name":"Apple Macbook Air M2 2022 16GB 256GB",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook_air_m2_2_1_1.jpg",
+      "price": "29,790,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20371",
+      "name":"Laptop MSI Gaming GF63 12VE-460VN",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_9__1_92.png",
+      "price": "21,490,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20372",
+      "name":"Laptop MSI Gaming GF63 12UC-887VN",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/l/a/laptop-msi-gaming-gf63-12uc-887vn.png",
+      "price": "18,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20373",
+      "name":"Laptop MSI Gaming GF63 Thin 11UC-1228VN",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_9__1_10.png",
+      "price": "17,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20374",
+      "name":"Laptop MSI Gaming Bravo 15 B7ED-010VN",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_12__3_11.png",
+      "price": "16,490,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20375",
+      "name":"Laptop MSI Modern 15 B7M-231VN",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_-_2023-06-19t173635.793_2.png",
+      "price": "12,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20376",
+      "name":"Laptop MSI Prestige 13 EVO A13M-081VN",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_-_2023-06-19t184937.729.png",
+      "price": "15,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20377",
+      "name":"Laptop MSI Pulse 17 AI C1VGKG-017VN",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/l/a/laptop-msi-pulse-17-ai-c1vgkg-017vn_3_.png",
+      "price": "18,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20378",
+      "name":"Laptop MSI Sword 16 HX B14VFKG-045VN",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/l/a/laptop-msi-sword-16-hx-b14vfkg-045vn_1_.png",
+      "price": "25,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20379",
+      "name":"Laptop MSI Crosshair 15 B12UEZ-460VN",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/g/e/gearvn-laptop-gaming-msi-crosshair-15-b12uez-460vn-2.jpg",
+      "price": "29,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20380",
+      "name":"Laptop MSI Katana GF66 12UDK-814VN",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_5_2.png",
+      "price": "25,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20381",
+      "name":"Laptop ASUS TUF Gaming F15 FX506HF-HN078W",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_1__3_27.png",
+      "price": "17,290,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20382",
+      "name":"Laptop ASUS Zenbook 14 OLED UM3402YA-KM405W",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_17__4_9.png",
+      "price": "20,490,000" ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20383",
+      "name":"Laptop ASUS TUF Gaming F15 FX507ZC4-HN074W",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_2__3_24.png",
+      "price": "19,490,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20384",
+      "name":"Laptop ASUS VivoBook 15 OLED A1505VA-L1114W",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_1__3_27.png",
+      "price": "17,590,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20385",
+      "name":"Laptop ASUS Gaming ROG Zephyrus G14 GA402NJ-L4056W",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_4_10.png",
+      "price": "30,490,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20386",
+      "name":"Laptop ASUS Zenbook 14 Oled UX3405MA-PP151W",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/a/s/asus-zenbook-14-oled-ux3405ma-ultra-5-pp151w-3.jpg",
+      "price": "26,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20387",
+      "name":"Laptop Asus ROG Zephyrus M16 GU604VI-NM779W",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_9__1_86.png",
+      "price": "67,890,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20388",
+      "name":"Laptop ASUS ROG Strix G16 G614JU-N3135W",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_9__1_86.png",
+      "price": "31,490,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20389",
+      "name":"Laptop Asus Expertbook B1402CBA-NK2669W",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_12__5_19.png",
+      "price": "13,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20390",
+      "name":"Laptop ASUS ZenBook S 13 OLED UX5304VA-NQ125W",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/t/e/text_ng_n_84__2.png",
+      "price": "30,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20391",
+      "name":"Laptop Dell Vostro 3520 Y4G15",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/t/e/text_ng_n_18__2_5.png",
+      "price": "17,490,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20392",
+      "name":"Laptop Dell Latitude 3520 70251592",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/l/a/laptop-dell-latitude-3520-70251592-1.jpg",
+      "price": "15,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20393",
+      "name":"Laptop Dell Inspirion 15 3511 PDP3H",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/7/e/7efbd23a-5394-4002-9d67-8fad17c18121.jpg",
+      "price": "13,490,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20394",
+      "name":"Laptop Dell Inspiron 15 3505 Y1N1T3",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/_/0/_0003_dell-inspiron-3505-y1n1t3-r3-325.jpg",
+      "price": "12,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20395",
+      "name":"Laptop Dell Inspiron 15 3520 YTC9K",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/t/e/text_ng_n_6_39_1.png",
+      "price": "12,590,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20396",
+      "name":"Laptop Dell Vostro 3520 F0V0V256",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/t/e/text_ng_n_14__5_17.png",
+      "price": "12,490,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20397",
+      "name":"Laptop Dell Inspiron 15 3525 4R52X",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/t/e/text_ng_n_17__4_3.png",
+      "price": "12,290,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20398",
+      "name":"Laptop Dell Inspiron 15 3520 W15KT",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/l/a/laptop-dell-inspiron-15-3520-w15kt_5__1.png",
+      "price": "12,190,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20399",
+      "name":"Laptop Dell Inspiron 15 3520-5810BLK 102F0",
+      "img": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/text_ng_n_6_39.png",
+      "price": "11,990,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
+    },
+    {
+      "id":"#20400",
+      "name":"Laptop Dell Inspiron 3511 P112F001ABL",
+      "img": "https://cdn2.cellphones.com.vn/x/media/catalog/product/_/0/_0004_dell-inspiron-3511-p112f001abl-i.jpg",
+      "price": "10,490,000 " ,
+      "exitInCart": false,
+      "linkPage": "http://127.0.0.1:5500/HTML/detailsInformationProductPage.html"
     }
-  ]
+
+]
